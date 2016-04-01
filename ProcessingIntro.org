@@ -1,0 +1,26 @@
+#+OPTIONS: toc:nil email:nil H:4 num:nil ^:nil
+#+TITLE: Introduksjon til Processing
+#+AUTHOR: Rustam Mehmendarov og Sigmund Hansen
+#+EMAIL: rm@computas.com sha@computas.com
+#+REVEAL_THEME: night
+
+* Før vi begynner
+
+- Har du lastet ned og pakket ut Processing?
+- Hva er Processing?
+- Hva er programmering?
+
+* Ditt første program
+
+- Start Processing
+- Skriv inn følgende og kjør det ved å trykke på pilen:
+
+#+BEGIN_SRC processing
+void setup() {
+  size(400, 400);
+}
+
+void draw() {
+  rect(100, 100, 200, 200);
+}
+#+END_SRC
