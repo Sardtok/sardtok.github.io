@@ -1,6 +1,6 @@
 #+OPTIONS: toc:nil email:nil H:4 num:nil ^:nil
 #+TITLE: Introduksjon til Processing
-#+AUTHOR: Rustam Mehmendarov og Sigmund Hansen
+#+AUTHOR: Rustam Mehmandarov og Sigmund Hansen
 #+EMAIL: rm@computas.com sha@computas.com
 #+REVEAL_THEME: night
 
@@ -24,3 +24,60 @@ void draw() {
   rect(100, 100, 200, 200);
 }
 #+END_SRC
+
+** Oppgaver
+
+- Endre størrelsen på vinduet
+- Endre størrelsen på firkanten
+- Flytt firkanten
+- Tegn flere firkanter
+
+* Ellipser
+
+- src_processing{ellipse(x, y, bredde, høyde);} tegner en ellipse
+- Skriv inn følgende og kjør den ved å trykke på pilen:
+
+#+BEGIN_SRC processing
+void setup() {
+  size(400, 400);
+}
+
+void draw() {
+  ellipse(100, 100, 200, 200);
+}
+#+END_SRC
+
+** Oppgaver
+
+- Flytt sirkelen til midten av vinduet
+- Tegn et ansikt med ellipser
+  - Ikke bruk bare sirkler, men varier bredde og høyde
+
+* Trekanter
+
+- src_processing{triangle(x1, y1, x2, y2, x3, y3);} tegner en trekant
+
+* Mangekanter
+
+- Man kan tegne former med mange kanter om man vil:
+
+#+BEGIN_SRC processing
+void setup() {
+  size(400, 400);
+}
+
+void draw() {
+  beginShape();
+  vertex(10, 10); // Legg til en kant
+  ... // Bytt ut ... med mange vertex-kall
+  vertex(30, 50); // Legg til siste kant
+  endShape(CLOSE); // CLOSE - Koble sammen første og siste kant
+}
+#+END_SRC
+
+** Oppgaver
+
+- Legg til masse kanter og lag en form
+- Hva skjer hvis du fjerner CLOSE?
+
+* Variabler
