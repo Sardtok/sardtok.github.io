@@ -4,6 +4,7 @@
 #+EMAIL: rm@computas.com sha@computas.com
 #+REVEAL_THEME: night
 #+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/3.0.0/
+#+REVEAL_EXTRA_CSS: bigsource.css
 
 * Før vi begynner
 
@@ -171,6 +172,98 @@ void draw() {
 #+END_SRC
 
 * Bevegelse
+- Endring fra bilde til bilde
+- Koden i ~draw~ kjører omtrent hvert 16. millisekund
+- Ved å endre variabler, får vi bevegelser
+
+#+BEGIN_SRC processing
+float x = 200;
+float y = 200;
+
+void setup() {
+  size(400, 400);
+}
+
+void draw() {
+  background(0);
+  x = x + 2.5;
+  y = y - 1.5;
+  ellipse(x, y, 50, 50);
+}
+#+END_SRC
+
+** Oppgaver
+- Hva skjer hvis du fjerner ~background(0);~?
+- Kan du få sirkelen til å:
+  - Bevege seg nedover til venstre?
+  - Vokse eller krympe?
+  - Aksellerere eller bremse opp?
+
+* Reagere på tilstander
+- Ballen forsvinner ut av vinduet
+- Vi må gjøre noe når den når kanten
+- Betingelsessetninger løser problemet
+- Men vi trenger å bruke variabler for retning/fart
+
+#+BEGIN_SRC processing
+float xSpeed = 2.5;
+float ySpeed = 1.5;
+...
+  x = x + xSpeed;
+  y = y + ySpeed;
+...
+#+END_SRC
+
+** Hvis A, så B
+- Lar oss gjøre B bare når A er sant:
+
+#+BEGIN_SRC processing
+...
+x = x + xSpeed;
+y = y + ySpeed;
+
+if (x > width - 25) {
+  x = width - 25;
+  xSpeed = -xSpeed;
+}
+...
+#+END_SRC
+
+*** Oppgaver
+- Kan du få ballen til å snu når den treffer bunnen også?
+
+** Hvis A, så B, ellers C
+- Lar oss gjøre B når A er sant, og C når det er usant:
+
+#+BEGIN_SRC processing
+  x = x + xSpeed;
+  y = y + ySpeed;
+
+  if (x > width - 25) {
+    background(#ff0000);
+    x = width - 25;
+    xSpeed = -xSpeed;
+  } else {
+    background(0);
+  }
+#+END_SRC
+
+** Hvis A, så B, eller hvis ...
+- Lar oss reagere på forskjellige tilstander,
+  men bare på det første av uttrykkene som er sanne:
+
+#+BEGIN_SRC processing
+if (x > width - 25) {
+  x = width - 25;
+  xSpeed = -xSpeed;
+} else if (x < 25) {
+  x = 25;
+  xSpeed = -xSpeed;
+}
+#+END_SRC
+
+*** Oppgaver
+- Få ballen til å sprette i bunnen og toppen også!
 
 * Sammensatte datatyper
 

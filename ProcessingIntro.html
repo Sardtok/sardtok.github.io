@@ -9,6 +9,7 @@
 </style>
 <link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.css"/>
 <link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/night.css" id="theme"/>
+<link rel="stylesheet" href="bigsource.css"/>
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
 <script>
@@ -317,14 +318,159 @@ eller usann (<code>false</code>)</li>
 </section>
 </section>
 <section>
+<section id="slide-orgheadline20">
+<h2 id="orgheadline20">Bevegelse</h2>
+<ul>
+<li>Endring fra bilde til bilde</li>
+<li>Koden i <code>draw</code> kjører omtrent hvert 16. millisekund</li>
+<li>Ved å endre variabler, får vi bevegelser</li>
+
+</ul>
+
+<div class="org-src-container">
+
+<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">float</span> <span style="color: #7590db;">x</span> = <span style="color: #a45bad;">200</span>;
+<span style="color: #ce537a; font-weight: bold;">float</span> <span style="color: #7590db;">y</span> = <span style="color: #a45bad;">200</span>;
+
+<span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">setup</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">size</span><span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">400</span>, <span style="color: #a45bad;">400</span><span style="color: #bc6ec5;">)</span>;
+<span style="color: #4f97d7;">}</span>
+
+<span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">draw</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">background</span><span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">0</span><span style="color: #bc6ec5;">)</span>;
+  x = x + <span style="color: #a45bad;">2</span>.<span style="color: #a45bad;">5</span>;
+  y = y - <span style="color: #a45bad;">1</span>.<span style="color: #a45bad;">5</span>;
+  <span style="color: #4f97d7; font-weight: bold;">ellipse</span><span style="color: #bc6ec5;">(</span>x, y, <span style="color: #a45bad;">50</span>, <span style="color: #a45bad;">50</span><span style="color: #bc6ec5;">)</span>;
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+
+</section>
 <section id="slide-orgheadline19">
-<h2 id="orgheadline19">Bevegelse</h2>
+<h3 id="orgheadline19">Oppgaver</h3>
+<ul>
+<li>Hva skjer hvis du fjerner <code>background(0);</code>?</li>
+<li>Kan du få sirkelen til å:
+<ul>
+<li>Bevege seg nedover til venstre?</li>
+<li>Vokse eller krympe?</li>
+<li>Aksellerere eller bremse opp?</li>
+
+</ul></li>
+
+</ul>
 
 </section>
 </section>
 <section>
-<section id="slide-orgheadline20">
-<h2 id="orgheadline20">Sammensatte datatyper</h2>
+<section id="slide-orgheadline26">
+<h2 id="orgheadline26">Reagere på tilstander</h2>
+<ul>
+<li>Ballen forsvinner ut av vinduet</li>
+<li>Vi må gjøre noe når den når kanten</li>
+<li>Betingelsessetninger løser problemet</li>
+<li>Men vi trenger å bruke variabler for retning/fart</li>
+
+</ul>
+
+<div class="org-src-container">
+
+<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">float</span> <span style="color: #7590db;">xSpeed</span> = <span style="color: #a45bad;">2</span>.<span style="color: #a45bad;">5</span>;
+<span style="color: #ce537a; font-weight: bold;">float</span> <span style="color: #7590db;">ySpeed</span> = <span style="color: #a45bad;">1</span>.<span style="color: #a45bad;">5</span>;
+...
+  x = x + xSpeed;
+  y = y + ySpeed;
+...
+</pre>
+</div>
+
+</section>
+<section id="slide-orgheadline22">
+<h3 id="orgheadline22">Hvis A, så B</h3>
+<ul>
+<li>Lar oss gjøre B bare når A er sant:</li>
+
+</ul>
+
+<div class="org-src-container">
+
+<pre  class="src src-processing">...
+x = x + xSpeed;
+y = y + ySpeed;
+
+<span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #4f97d7;">(</span>x &gt; <span style="color: #4f97d7;">width</span> - <span style="color: #a45bad;">25</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  x = <span style="color: #4f97d7;">width</span> - <span style="color: #a45bad;">25</span>;
+  xSpeed = -xSpeed;
+<span style="color: #4f97d7;">}</span>
+...
+</pre>
+</div>
+
+</section>
+<section id="slide-orgheadline21">
+<h4 id="orgheadline21">Oppgaver</h4>
+<ul>
+<li>Kan du få ballen til å snu når den treffer bunnen også?</li>
+
+</ul>
+
+</section>
+<section id="slide-orgheadline23">
+<h3 id="orgheadline23">Hvis A, så B, ellers C</h3>
+<ul>
+<li>Lar oss gjøre B når A er sant, og C når det er usant:</li>
+
+</ul>
+
+<div class="org-src-container">
+
+<pre  class="src src-processing">x = x + xSpeed;
+y = y + ySpeed;
+
+<span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #4f97d7;">(</span>x &gt; <span style="color: #4f97d7;">width</span> - <span style="color: #a45bad;">25</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">background</span><span style="color: #bc6ec5;">(</span>#ff0000<span style="color: #bc6ec5;">)</span>;
+  x = <span style="color: #4f97d7;">width</span> - <span style="color: #a45bad;">25</span>;
+  xSpeed = -xSpeed;
+<span style="color: #4f97d7;">}</span> <span style="color: #4f97d7; font-weight: bold;">else</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">background</span><span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">0</span><span style="color: #bc6ec5;">)</span>;
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+
+</section>
+<section id="slide-orgheadline25">
+<h3 id="orgheadline25">Hvis A, så B, eller hvis &#x2026;</h3>
+<ul>
+<li>Lar oss reagere på forskjellige tilstander,
+men bare på det første av uttrykkene som er sanne:</li>
+
+</ul>
+
+<div class="org-src-container">
+
+<pre  class="src src-processing"><span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #4f97d7;">(</span>x &gt; <span style="color: #4f97d7;">width</span> - <span style="color: #a45bad;">25</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  x = <span style="color: #4f97d7;">width</span> - <span style="color: #a45bad;">25</span>;
+  xSpeed = -xSpeed;
+<span style="color: #4f97d7;">}</span> <span style="color: #4f97d7; font-weight: bold;">else</span> <span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #4f97d7;">(</span>x &lt; <span style="color: #a45bad;">25</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  x = <span style="color: #a45bad;">25</span>;
+  xSpeed = -xSpeed;
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+
+</section>
+<section id="slide-orgheadline24">
+<h4 id="orgheadline24">Oppgaver</h4>
+<ul>
+<li>Få ballen til å sprette i bunnen og toppen også!</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline27">
+<h2 id="orgheadline27">Sammensatte datatyper</h2>
 <ul>
 <li>Typer som ikke har en spesiell plass</li>
 <li>Du kan lage dine egne</li>
