@@ -469,8 +469,116 @@ men bare på det første av uttrykkene som er sanne:</li>
 </section>
 </section>
 <section>
+<section id="slide-orgheadline32">
+<h2 id="orgheadline32">Tastatur</h2>
+<ul>
+<li>Kan håndtere når:
+<ul>
+<li>En tast trykkes inn</li>
+<li>En tast slippes</li>
+
+</ul></li>
+
+</ul>
+
+</section>
 <section id="slide-orgheadline27">
-<h2 id="orgheadline27">Sammensatte datatyper</h2>
+<h3 id="orgheadline27">Tast trykkes inn</h3>
+<div class="org-src-container">
+
+<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #4f97d7; font-weight: bold;">keyPressed</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #bc6ec5;">(</span><span style="color: #4f97d7;">key</span> == <span style="color: #2d9574;">'a'</span><span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
+    x = x - <span style="color: #a45bad;">2</span>.<span style="color: #a45bad;">5</span>;
+  <span style="color: #bc6ec5;">}</span>
+
+  <span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #bc6ec5;">(</span><span style="color: #4f97d7;">keyCode</span> == <span style="color: #a45bad;">LEFT</span><span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
+    x = x - <span style="color: #a45bad;">2</span>.<span style="color: #a45bad;">5</span>;
+  <span style="color: #bc6ec5;">}</span>
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+
+</section>
+<section id="slide-orgheadline29">
+<h3 id="orgheadline29">Tasterepetisjon</h3>
+<ul>
+<li>Koden over virker takket være tasterepetisjon</li>
+<li>Må vente lenge før det begynner</li>
+<li>Hakker</li>
+<li>Kan bruke boolske variabler til å holde rede på tilstanden:</li>
+
+</ul>
+
+</section>
+<section>
+
+<div class="org-src-container">
+
+<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">boolean</span> <span style="color: #7590db;">left</span>;
+...
+<span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #4f97d7; font-weight: bold;">keyPressed</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #bc6ec5;">(</span><span style="color: #4f97d7;">key</span> == <span style="color: #2d9574;">'a'</span><span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
+    left = <span style="color: #a45bad;">true</span>;
+  <span style="color: #bc6ec5;">}</span>
+...
+<span style="color: #4f97d7;">}</span>
+
+<span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">draw</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #ce537a; font-weight: bold;">float</span> <span style="color: #7590db;">xSpeed</span> = <span style="color: #a45bad;">0</span>;
+  <span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #bc6ec5;">(</span>left<span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
+    xSpeed = xSpeed - <span style="color: #a45bad;">2</span>.<span style="color: #a45bad;">5</span>;
+  <span style="color: #bc6ec5;">}</span>
+...
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+
+</section>
+<section id="slide-orgheadline28">
+<h4 id="orgheadline28">Oppgaver</h4>
+<ul>
+<li>Legg til variabler for høyre, opp og ned</li>
+<li>Sett dem til sanne når passende taster trykkes inn</li>
+<li>Sett og oppdater xSpeed og ySpeed basert på variablene</li>
+<li>Hva mangler?</li>
+
+</ul>
+
+</section>
+<section id="slide-orgheadline31">
+<h3 id="orgheadline31">Tast slippes opp</h3>
+<ul>
+<li>Vi må også reagere på at tasten slippes</li>
+<li>Gjør som regel akkurat det motsatte av <code>keyPressed</code></li>
+<li>Kan derfor kopiere koden og oppdatere variabler motsatt:</li>
+
+</ul>
+
+<div class="org-src-container">
+
+<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #4f97d7; font-weight: bold;">keyReleased</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #bc6ec5;">(</span><span style="color: #4f97d7;">key</span> ==<span style="color: #2d9574;">'a'</span><span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
+    left = <span style="color: #a45bad;">false</span>;
+  <span style="color: #bc6ec5;">}</span>
+...
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+
+</section>
+<section id="slide-orgheadline30">
+<h4 id="orgheadline30">Oppgaver</h4>
+<ul>
+<li>Skriv ferdig koden i <code>keyReleased</code> <br  />
+sånn at du kan styre ballen med tastaturet.</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline33">
+<h2 id="orgheadline33">Sammensatte datatyper</h2>
 <ul>
 <li>Typer som ikke har en spesiell plass</li>
 <li>Du kan lage dine egne</li>

@@ -265,6 +265,75 @@ if (x > width - 25) {
 *** Oppgaver
 - Få ballen til å sprette i bunnen og toppen også!
 
+* Tastatur
+- Kan håndtere når:
+  - En tast trykkes inn
+  - En tast slippes
+
+** Tast trykkes inn
+#+BEGIN_SRC processing
+void keyPressed() {
+  if (key == 'a') {
+    x = x - 2.5;
+  }
+
+  if (keyCode == LEFT) {
+    x = x - 2.5;
+  }
+}
+#+END_SRC
+
+** Tasterepetisjon
+- Koden over virker takket være tasterepetisjon
+- Må vente lenge før det begynner
+- Hakker
+- Kan bruke boolske variabler til å holde rede på tilstanden:
+
+#+REVEAL: split
+
+#+BEGIN_SRC processing
+boolean left;
+...
+void keyPressed() {
+  if (key == 'a') {
+    left = true;
+  }
+...
+}
+
+void draw() {
+  float xSpeed = 0;
+  if (left) {
+    xSpeed = xSpeed - 2.5;
+  }
+...
+}
+#+END_SRC
+
+*** Oppgaver
+- Legg til variabler for høyre, opp og ned
+- Sett dem til sanne når passende taster trykkes inn
+- Sett og oppdater xSpeed og ySpeed basert på variablene
+- Hva mangler?
+
+** Tast slippes opp
+- Vi må også reagere på at tasten slippes
+- Gjør som regel akkurat det motsatte av ~keyPressed~
+- Kan derfor kopiere koden og oppdatere variabler motsatt:
+
+#+BEGIN_SRC processing
+void keyReleased() {
+  if (key =='a') {
+    left = false;
+  }
+...
+}
+#+END_SRC
+
+*** Oppgaver
+- Skriv ferdig koden i ~keyReleased~ \\
+  sånn at du kan styre ballen med tastaturet.
+
 * Sammensatte datatyper
 
 - Typer som ikke har en spesiell plass
