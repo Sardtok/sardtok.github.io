@@ -3,17 +3,20 @@
 <head>
 <meta charset="utf-8"/>
 <title>Introduksjon til Processing</title>
-<meta name="author" content="(Rustam Mehmendarov og Sigmund Hansen)"/>
-<link rel="stylesheet" href="./reveal.js/css/reveal.css"/>
-<link rel="stylesheet" href="./reveal.js/css/theme/night.css" id="theme"/>
-<link rel="stylesheet" href=""/>
+<meta name="author" content="(Rustam Mehmandarov og Sigmund Hansen)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.css"/>
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/night.css" id="theme"/>
+
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
 <script>
     if( window.location.search.match( /print-pdf/gi ) ) {
         var link = document.createElement( 'link' );
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = './reveal.js/css/print/pdf.css';
+        link.href = 'http://cdn.jsdelivr.net/reveal.js/3.0.0/css/print/pdf.css';
         document.getElementsByTagName( 'head' )[0].appendChild( link );
     }
 </script>
@@ -23,7 +26,7 @@
 <div class="slides">
 <section id="sec-title-slide">
 <h1>Introduksjon til Processing</h1>
-<h2>Rustam Mehmendarov og Sigmund Hansen</h2>
+<h2>Rustam Mehmandarov og Sigmund Hansen</h2>
 <h2><a href="mailto:rm@computas.com sha@computas.com">rm@computas.com sha@computas.com</a></h2>
 <h2></h2>
 </section>
@@ -41,8 +44,8 @@
 </section>
 </section>
 <section>
-<section id="slide-orgheadline2">
-<h2 id="orgheadline2">Ditt første program</h2>
+<section id="slide-orgheadline3">
+<h2 id="orgheadline3">Ditt første program</h2>
 <ul>
 <li>Start Processing</li>
 <li>Skriv inn følgende og kjør det ved å trykke på pilen:</li>
@@ -51,21 +54,292 @@
 
 <div class="org-src-container">
 
-<pre  class="src src-processing">void setup() {
-  size(400, 400);
-}
+<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">setup</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">size</span><span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">400</span>, <span style="color: #a45bad;">400</span><span style="color: #bc6ec5;">)</span>;
+<span style="color: #4f97d7;">}</span>
 
-void draw() {
-  rect(100, 100, 200, 200);
-}
+<span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">draw</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">rect</span><span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">100</span>, <span style="color: #a45bad;">100</span>, <span style="color: #a45bad;">200</span>, <span style="color: #a45bad;">200</span><span style="color: #bc6ec5;">)</span>;
+<span style="color: #4f97d7;">}</span>
 </pre>
 </div>
+
+</section>
+<section id="slide-orgheadline2">
+<h3 id="orgheadline2">Oppgaver</h3>
+<ul>
+<li>Endre størrelsen på vinduet</li>
+<li>Endre størrelsen på firkanten</li>
+<li>Endre posisjonen til firkanten</li>
+<li>Tegn flere firkanter</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline5">
+<h2 id="orgheadline5">Ellipser</h2>
+<ul>
+<li>tegner en ellipse</li>
+<li>Skriv inn følgende og kjør den ved å trykke på pilen:</li>
+
+</ul>
+
+<div class="org-src-container">
+
+<pre  class="src src-processing"><span style="color: #4f97d7; font-weight: bold;">ellipse</span><span style="color: #4f97d7;">(</span><span style="color: #a45bad;">100</span>, <span style="color: #a45bad;">100</span>, <span style="color: #a45bad;">200</span>, <span style="color: #a45bad;">200</span><span style="color: #4f97d7;">)</span>;
+</pre>
+</div>
+
+</section>
+<section id="slide-orgheadline4">
+<h3 id="orgheadline4">Oppgaver</h3>
+<ul>
+<li>Flytt sirkelen til midten av vinduet</li>
+<li>Tegn et ansikt med ellipser
+<ul>
+<li>Ikke bruk bare sirkler, men varier bredde og høyde</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline7">
+<h2 id="orgheadline7">Trekanter</h2>
+<ul>
+<li>Tegn en trekant med:</li>
+
+</ul>
+
+<div class="org-src-container">
+
+<pre  class="src src-processing"><span style="color: #4f97d7; font-weight: bold;">triangle</span><span style="color: #4f97d7;">(</span>x1, y1, x2, y2, x3, y3<span style="color: #4f97d7;">)</span>;
+</pre>
+</div>
+
+<p>
+Her er <code>x1</code> og <code>y1</code> posisjonen til det første hjørnet
+</p>
+
+</section>
+<section id="slide-orgheadline6">
+<h3 id="orgheadline6">Oppgaver</h3>
+<ul>
+<li>Tegn tre trekanter som ser omtrent slik ut:</li>
+
+</ul>
+
+
+<div class="figure">
+<p><img src="./images/triforce.jpg" alt="triforce.jpg" width="25%" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline9">
+<h2 id="orgheadline9">Mangekanter</h2>
+<ul>
+<li>Man kan tegne former med mange kanter om man vil:</li>
+
+</ul>
+
+<div class="org-src-container">
+
+<pre  class="src src-processing"><span style="color: #4f97d7; font-weight: bold;">beginShape</span><span style="color: #4f97d7;">()</span>;
+<span style="color: #4f97d7; font-weight: bold;">vertex</span><span style="color: #4f97d7;">(</span><span style="color: #a45bad;">10</span>, <span style="color: #a45bad;">10</span><span style="color: #4f97d7;">)</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Legg til et hj&#248;rne</span>
+... <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Bytt ut ... med mange vertex-kall</span>
+<span style="color: #4f97d7; font-weight: bold;">vertex</span><span style="color: #4f97d7;">(</span><span style="color: #a45bad;">30</span>, <span style="color: #a45bad;">50</span><span style="color: #4f97d7;">)</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Legg til siste h&#248;rne</span>
+<span style="color: #4f97d7; font-weight: bold;">endShape</span><span style="color: #4f97d7;">(</span><span style="color: #a45bad;">CLOSE</span><span style="color: #4f97d7;">)</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">CLOSE - Koble sammen f&#248;rste og siste hj&#248;rne</span>
+</pre>
+</div>
+
+</section>
+<section id="slide-orgheadline8">
+<h3 id="orgheadline8">Oppgaver</h3>
+<ul>
+<li>Legg til masse kanter og lag en form</li>
+<li>Hva skjer hvis du fjerner CLOSE?</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline18">
+<h2 id="orgheadline18">Variabler</h2>
+<ul>
+<li>Navngitte lagringsplasser for verdier</li>
+<li>Kan endre verdien under kjøring</li>
+<li class="fragment roll-in">DYNAMIKK!!!</li>
+
+</ul>
+
+</section>
+<section id="slide-orgheadline16">
+<h3 id="orgheadline16">Datatyper</h3>
+<ul>
+<li>Angir alltid typen: <br  />
+<code>type navn = startverdi;</code></li>
+<li>Til nå bare tall</li>
+<li>La oss se på noen spesielle typer:</li>
+
+</ul>
+
+</section>
+<section id="slide-orgheadline10">
+<h4 id="orgheadline10">Heltall</h4>
+<ul>
+<li><code>int</code> (kort for integer)</li>
+<li>Tall uten desimaler</li>
+
+</ul>
+
+<div class="org-src-container">
+
+<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">a</span> = <span style="color: #a45bad;">5</span>;
+</pre>
+</div>
+
+</section>
+<section id="slide-orgheadline11">
+<h4 id="orgheadline11">Flyttall</h4>
+<ul>
+<li><code>float</code> (kort for floating point number)</li>
+<li>Tall med desimaler</li>
+<li>Ikke helt presise (7,2 siffer?!?)</li>
+<li>Nyttig til jevne bevegelser</li>
+
+</ul>
+
+<div class="org-src-container">
+
+<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">float</span> <span style="color: #7590db;">pi</span> = <span style="color: #a45bad;">3</span>.<span style="color: #a45bad;">14</span>;
+</pre>
+</div>
+
+</section>
+<section id="slide-orgheadline12">
+<h4 id="orgheadline12">Boolske verdier</h4>
+<ul>
+<li><code>boolean</code> (etter George Boole)</li>
+<li>Sannhetsverdier</li>
+<li>En verdi som er sann (<code>true</code>)
+eller usann (<code>false</code>)</li>
+<li>Nyttig for av-og-på-tilstander</li>
+
+</ul>
+
+<div class="org-src-container">
+
+<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">boolean</span> <span style="color: #7590db;">awesome</span> = <span style="color: #a45bad;">true</span>;
+</pre>
+</div>
+
+</section>
+<section id="slide-orgheadline13">
+<h4 id="orgheadline13">Tegn</h4>
+<ul>
+<li><code>char</code> (kort for character)</li>
+<li>Bokstaver, tall og andre symboler</li>
+<li>Nyttig til håndtering av tastetrykk</li>
+
+</ul>
+
+<div class="org-src-container">
+
+<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">char</span> <span style="color: #7590db;">c</span> = <span style="color: #2d9574;">'c'</span>;
+</pre>
+</div>
+
+</section>
+<section id="slide-orgheadline14">
+<h4 id="orgheadline14">Strenger (tekst)</h4>
+<ul>
+<li><code>String</code> (en streng med tegn)</li>
+<li>En sammensatt datatype</li>
+
+</ul>
+
+<div class="org-src-container">
+
+<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">String</span> <span style="color: #4f97d7; font-weight: bold;">text</span> = <span style="color: #2d9574;">"Can I haz cheezeburger?"</span>;
+</pre>
+</div>
+
+</section>
+<section id="slide-orgheadline15">
+<h4 id="orgheadline15">Farger</h4>
+<ul>
+<li><code>color</code></li>
+<li>Egentlig en <code>int</code></li>
+<li>Består av rød, grønn og blå</li>
+<li>Eventuelt også ugjennomsiktighet <br  />
+(opacity - alpha)</li>
+
+</ul>
+
+<div class="org-src-container">
+
+<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">color</span> <span style="color: #7590db;">c1</span> = #ff8040;
+<span style="color: #ce537a; font-weight: bold;">color</span> <span style="color: #7590db;">c2</span> = <span style="color: #4f97d7; font-weight: bold;">color</span><span style="color: #4f97d7;">(</span><span style="color: #a45bad;">255</span>, <span style="color: #a45bad;">128</span>, <span style="color: #a45bad;">64</span><span style="color: #4f97d7;">)</span>;
+</pre>
+</div>
+
+</section>
+<section id="slide-orgheadline17">
+<h3 id="orgheadline17">Oppgaver</h3>
+<ul>
+<li>Hvor kan du ellers bruke variabler i programmet under?</li>
+<li>Hvilke datatyper vil du bruke på de forskjellige stedene?</li>
+
+</ul>
+
+<div class="org-src-container">
+
+<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">float</span> <span style="color: #7590db;">x</span> = <span style="color: #a45bad;">200</span>.<span style="color: #a45bad;">0</span>;
+
+<span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">setup</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">size</span><span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">400</span>, <span style="color: #a45bad;">400</span><span style="color: #bc6ec5;">)</span>;
+<span style="color: #4f97d7;">}</span>
+
+<span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">draw</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">ellipse</span><span style="color: #bc6ec5;">(</span>x, <span style="color: #a45bad;">200</span>, <span style="color: #a45bad;">50</span>, <span style="color: #a45bad;">50</span><span style="color: #bc6ec5;">)</span>;
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline19">
+<h2 id="orgheadline19">Bevegelse</h2>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline20">
+<h2 id="orgheadline20">Sammensatte datatyper</h2>
+<ul>
+<li>Typer som ikke har en spesiell plass</li>
+<li>Du kan lage dine egne</li>
+<li>Det finnes mange slike</li>
+<li>Processings egne begynner typisk med stor P: <br  />
+PShape, PImage, osv.</li>
+<li>Vi kommer tilbake til disse senere</li>
+
+</ul>
 </section>
 </section>
 </div>
 </div>
-<script src="./reveal.js/lib/js/head.min.js"></script>
-<script src="./reveal.js/js/reveal.js"></script>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.js"></script>
 
 <script>
 // Full list of configuration options available here:
@@ -76,7 +350,7 @@ controls: true,
 progress: true,
 history: false,
 center: true,
-slideNumber: true,
+slideNumber: 'c',
 rollingLinks: false,
 keyboard: true,
 overview: true,
@@ -92,11 +366,11 @@ multiplex: {
 
 // Optional libraries used to extend on reveal.js
 dependencies: [
- { src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
- { src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
- { src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
- { src: './reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
- { src: './reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
 });
 </script>
 </body>

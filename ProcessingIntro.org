@@ -3,6 +3,7 @@
 #+AUTHOR: Rustam Mehmandarov og Sigmund Hansen
 #+EMAIL: rm@computas.com sha@computas.com
 #+REVEAL_THEME: night
+#+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/3.0.0/
 
 * Før vi begynner
 
@@ -29,7 +30,7 @@ void draw() {
 
 - Endre størrelsen på vinduet
 - Endre størrelsen på firkanten
-- Flytt firkanten
+- Endre posisjonen til firkanten
 - Tegn flere firkanter
 
 * Ellipser
@@ -38,13 +39,7 @@ void draw() {
 - Skriv inn følgende og kjør den ved å trykke på pilen:
 
 #+BEGIN_SRC processing
-void setup() {
-  size(400, 400);
-}
-
-void draw() {
   ellipse(100, 100, 200, 200);
-}
 #+END_SRC
 
 ** Oppgaver
@@ -55,24 +50,31 @@ void draw() {
 
 * Trekanter
 
-- src_processing{triangle(x1, y1, x2, y2, x3, y3);} tegner en trekant
+- Tegn en trekant med:
+
+#+BEGIN_SRC processing
+triangle(x1, y1, x2, y2, x3, y3);
+#+END_SRC
+
+Her er ~x1~ og ~y1~ posisjonen til det første hjørnet
+
+** Oppgaver
+
+- Tegn tre trekanter som ser omtrent slik ut:
+
+#+ATTR_HTML: :width 25%
+[[./images/triforce.jpg]]
 
 * Mangekanter
 
 - Man kan tegne former med mange kanter om man vil:
 
 #+BEGIN_SRC processing
-void setup() {
-  size(400, 400);
-}
-
-void draw() {
   beginShape();
-  vertex(10, 10); // Legg til en kant
+  vertex(10, 10); // Legg til et hjørne
   ... // Bytt ut ... med mange vertex-kall
-  vertex(30, 50); // Legg til siste kant
-  endShape(CLOSE); // CLOSE - Koble sammen første og siste kant
-}
+  vertex(30, 50); // Legg til siste hørne
+  endShape(CLOSE); // CLOSE - Koble sammen første og siste hjørne
 #+END_SRC
 
 ** Oppgaver
@@ -81,3 +83,100 @@ void draw() {
 - Hva skjer hvis du fjerner CLOSE?
 
 * Variabler
+#+ATTR_REVEAL: :frag (none none roll-in)
+- Navngitte lagringsplasser for verdier
+- Kan endre verdien under kjøring
+- DYNAMIKK!!!
+
+** Datatyper
+
+- Angir alltid typen: \\
+  ~type navn = startverdi;~
+- Til nå bare tall
+- La oss se på noen spesielle typer:
+
+*** Heltall
+- ~int~ (kort for integer)
+- Tall uten desimaler
+
+#+BEGIN_SRC processing
+int a = 5;
+#+END_SRC
+
+*** Flyttall
+- ~float~ (kort for floating point number)
+- Tall med desimaler
+- Ikke helt presise (7,2 siffer?!?)
+- Nyttig til jevne bevegelser
+
+#+BEGIN_SRC processing
+float pi = 3.14;
+#+END_SRC
+
+*** Boolske verdier
+- ~boolean~ (etter George Boole)
+- Sannhetsverdier
+- En verdi som er sann (~true~)
+  eller usann (~false~)
+- Nyttig for av-og-på-tilstander
+
+#+BEGIN_SRC processing
+boolean awesome = true;
+#+END_SRC
+
+*** Tegn
+- ~char~ (kort for character)
+- Bokstaver, tall og andre symboler
+- Nyttig til håndtering av tastetrykk
+
+#+BEGIN_SRC processing
+char c = 'c';
+#+END_SRC
+
+*** Strenger (tekst)
+- ~String~ (en streng med tegn)
+- En sammensatt datatype
+
+#+BEGIN_SRC processing
+String text = "Can I haz cheezeburger?";
+#+END_SRC
+
+*** Farger
+- ~color~
+- Egentlig en ~int~
+- Består av rød, grønn og blå
+- Eventuelt også ugjennomsiktighet \\
+  (opacity - alpha)
+
+#+BEGIN_SRC processing
+color c1 = #ff8040;
+color c2 = color(255, 128, 64);
+#+END_SRC
+
+** Oppgaver
+
+- Hvor kan du ellers bruke variabler i programmet under?
+- Hvilke datatyper vil du bruke på de forskjellige stedene?
+
+#+BEGIN_SRC processing
+float x = 200.0;
+
+void setup() {
+  size(400, 400);
+}
+
+void draw() {
+  ellipse(x, 200, 50, 50);
+}
+#+END_SRC
+
+* Bevegelse
+
+* Sammensatte datatyper
+
+- Typer som ikke har en spesiell plass
+- Du kan lage dine egne
+- Det finnes mange slike
+- Processings egne begynner typisk med stor P: \\
+  PShape, PImage, osv.
+- Vi kommer tilbake til disse senere
