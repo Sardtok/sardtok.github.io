@@ -7,8 +7,8 @@
 <style type="text/css">
 .underline { text-decoration: underline; }
 </style>
-<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.css"/>
-<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/night.css" id="theme"/>
+<link rel="stylesheet" href="./reveal.js/css/reveal.css"/>
+<link rel="stylesheet" href="./reveal.js/css/theme/night.css" id="theme"/>
 <link rel="stylesheet" href="bigsource.css"/>
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
@@ -17,7 +17,7 @@
         var link = document.createElement( 'link' );
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = 'http://cdn.jsdelivr.net/reveal.js/3.0.0/css/print/pdf.css';
+        link.href = './reveal.js/css/print/pdf.css';
         document.getElementsByTagName( 'head' )[0].appendChild( link );
     }
 </script>
@@ -60,6 +60,7 @@
 <span style="color: #4f97d7;">}</span>
 
 <span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">draw</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">background</span><span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">0</span><span style="color: #bc6ec5;">)</span>;
   <span style="color: #4f97d7; font-weight: bold;">rect</span><span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">100</span>, <span style="color: #a45bad;">100</span>, <span style="color: #a45bad;">200</span>, <span style="color: #a45bad;">200</span><span style="color: #bc6ec5;">)</span>;
 <span style="color: #4f97d7;">}</span>
 </pre>
@@ -69,10 +70,12 @@
 <section id="slide-orgheadline2">
 <h3 id="orgheadline2">Oppgaver</h3>
 <ul>
+<li>Finn ut hva tallene gjør og:</li>
 <li>Endre størrelsen på vinduet</li>
 <li>Endre størrelsen på firkanten</li>
 <li>Endre posisjonen til firkanten</li>
 <li>Tegn flere firkanter</li>
+<li>Hva skjer hvis du fjerner <code>background(0);</code>?</li>
 
 </ul>
 
@@ -82,14 +85,13 @@
 <section id="slide-orgheadline5">
 <h2 id="orgheadline5">Ellipser</h2>
 <ul>
-<li>tegner en ellipse</li>
-<li>Skriv inn følgende og kjør den ved å trykke på pilen:</li>
+<li>Tegn en ellipse med:</li>
 
 </ul>
 
 <div class="org-src-container">
 
-<pre  class="src src-processing"><span style="color: #4f97d7; font-weight: bold;">ellipse</span><span style="color: #4f97d7;">(</span><span style="color: #a45bad;">100</span>, <span style="color: #a45bad;">100</span>, <span style="color: #a45bad;">200</span>, <span style="color: #a45bad;">200</span><span style="color: #4f97d7;">)</span>;
+<pre  class="src src-processing"><span style="color: #4f97d7; font-weight: bold;">ellipse</span><span style="color: #4f97d7;">(</span>x, y, bredde, h&#248;yde<span style="color: #4f97d7;">)</span>;
 </pre>
 </div>
 
@@ -97,7 +99,7 @@
 <section id="slide-orgheadline4">
 <h3 id="orgheadline4">Oppgaver</h3>
 <ul>
-<li>Flytt sirkelen til midten av vinduet</li>
+<li>Tegn en sirkel midt i vinduet</li>
 <li>Tegn et ansikt med ellipser
 <ul>
 <li>Ikke bruk bare sirkler, men varier bredde og høyde</li>
@@ -315,6 +317,7 @@ eller usann (<code>false</code>)</li>
 <span style="color: #4f97d7;">}</span>
 
 <span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">draw</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">background</span><span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">0</span><span style="color: #bc6ec5;">)</span>;
   <span style="color: #4f97d7; font-weight: bold;">ellipse</span><span style="color: #bc6ec5;">(</span>x, <span style="color: #a45bad;">200</span>, <span style="color: #a45bad;">50</span>, <span style="color: #a45bad;">50</span><span style="color: #bc6ec5;">)</span>;
 <span style="color: #4f97d7;">}</span>
 </pre>
@@ -621,23 +624,270 @@ Hint: <code>fill(farge)</code> setter fargen på det du skal tegne.</li>
 </section>
 </section>
 <section>
-<section id="slide-orgheadline35">
-<h2 id="orgheadline35">Sammensatte datatyper</h2>
+<section id="slide-orgheadline43">
+<h2 id="orgheadline43">Sammensatte datatyper</h2>
 <ul>
 <li>Typer som ikke har en spesiell plass</li>
+<li>Typisk bygget opp av flere variabler</li>
+<li>Kan ha "oppførsel"</li>
 <li>Du kan lage dine egne</li>
-<li>Det finnes mange slike</li>
+<li>Det finnes mange slike fra før</li>
 <li>Processings egne begynner typisk med stor P: <br  />
 PShape, PImage, osv.</li>
-<li>Vi kommer tilbake til disse senere</li>
+
+</ul>
+
+</section>
+<section id="slide-orgheadline36">
+<h3 id="orgheadline36">Bilder</h3>
+<ul>
+<li>Lag en mappe som heter data i prosjektmappen</li>
+<li>Lagre bildefilen her</li>
+<li>Bilder kan ikke lastes inn før <code>setup</code></li>
+<li>Laste inn og tegne bilder:</li>
+
+</ul>
+
+<div class="org-src-container">
+
+<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">PImage</span> <span style="color: #7590db;">bilde</span>;
+
+<span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">setup</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">size</span><span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">400</span>, <span style="color: #a45bad;">400</span><span style="color: #bc6ec5;">)</span>;
+  bilde = <span style="color: #4f97d7; font-weight: bold;">loadImage</span><span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">"bilde.png"</span><span style="color: #bc6ec5;">)</span>;
+<span style="color: #4f97d7;">}</span>
+
+<span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">draw</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">background</span><span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">0</span><span style="color: #bc6ec5;">)</span>;
+  <span style="color: #4f97d7; font-weight: bold;">image</span><span style="color: #bc6ec5;">(</span>bilde, <span style="color: #a45bad;">200</span>, <span style="color: #a45bad;">200</span><span style="color: #bc6ec5;">)</span>;
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+
+</section>
+<section id="slide-orgheadline35">
+<h4 id="orgheadline35">Oppgaver</h4>
+<ul>
+<li>Hva skjer om du fjerner innlastingen?</li>
+<li>Midtstill bildet:
+<ul>
+<li>Slå opp <code>imageMode</code> i referansen</li>
+<li>Legg til et kall på <code>imageMode</code> i <code>setup</code></li>
+
+</ul></li>
+
+</ul>
+
+</section>
+<section id="slide-orgheadline42">
+<h3 id="orgheadline42">Egendefinerte typer</h3>
+<ul>
+<li>Sammensatte typer lages av klasser</li>
+<li>Når vi lager noe av denne typen kalles de objekter</li>
+<li>Kan minne om Platons idélære</li>
+<li>Vi kan definere egne typer med:</li>
+
+</ul>
+
+<div class="org-src-container">
+
+<pre  class="src src-processing"><span style="color: #4f97d7; font-weight: bold;">class</span> <span style="color: #ce537a; font-weight: bold;">TypeNavn</span> <span style="color: #4f97d7;">{</span>
+...
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+
+</section>
+<section id="slide-orgheadline37">
+<h4 id="orgheadline37">Variabler</h4>
+<ul>
+<li>Ser ut som vanlig</li>
+<li>Plasseres mellom krøllparentesene</li>
+
+</ul>
+
+<div class="org-src-container">
+
+<pre  class="src src-processing"><span style="color: #4f97d7; font-weight: bold;">class</span> <span style="color: #ce537a; font-weight: bold;">Ball</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #ce537a; font-weight: bold;">float</span> <span style="color: #7590db;">x</span>;
+  <span style="color: #ce537a; font-weight: bold;">float</span> <span style="color: #7590db;">y</span>;
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+
+</section>
+<section id="slide-orgheadline38">
+<h4 id="orgheadline38">Konstruktør</h4>
+<ul>
+<li>Brukes til å opprette objekter av klassen</li>
+<li>Har samme navn som klassen</li>
+
+</ul>
+
+<div class="org-src-container">
+
+<pre  class="src src-processing"><span style="color: #4f97d7; font-weight: bold;">class</span> <span style="color: #ce537a; font-weight: bold;">Ball</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #ce537a; font-weight: bold;">float</span> <span style="color: #7590db;">x</span>;
+  <span style="color: #ce537a; font-weight: bold;">float</span> <span style="color: #7590db;">y</span>;
+
+  <span style="color: #bc6ec5; font-weight: bold;">Ball</span><span style="color: #bc6ec5;">(</span><span style="color: #ce537a; font-weight: bold;">float</span> <span style="color: #7590db;">x</span>, <span style="color: #ce537a; font-weight: bold;">float</span> <span style="color: #7590db;">y</span><span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
+    <span style="color: #4f97d7; font-weight: bold;">this</span>.x = x;
+    <span style="color: #4f97d7; font-weight: bold;">this</span>.y = y;
+  <span style="color: #bc6ec5;">}</span>
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+
+</section>
+<section id="slide-orgheadline39">
+<h4 id="orgheadline39">Oppførsel</h4>
+<ul>
+<li>Kan lage metoder
+<ul>
+<li><code>setup</code>, <code>draw</code> er metoder du har sett før</li>
+
+</ul></li>
+<li>Kan være lurt med egen <code>draw</code>-metode</li>
+
+</ul>
+
+<div class="org-src-container">
+
+<pre  class="src src-processing"><span style="color: #4f97d7; font-weight: bold;">class</span> <span style="color: #ce537a; font-weight: bold;">Ball</span> <span style="color: #4f97d7;">{</span>
+...
+  <span style="color: #ce537a; font-weight: bold;">void</span> draw<span style="color: #bc6ec5;">()</span> <span style="color: #bc6ec5;">{</span>
+    ellipsse<span style="color: #2d9574;">(</span>x, y, <span style="color: #a45bad;">50</span>, <span style="color: #a45bad;">50</span><span style="color: #2d9574;">)</span>;
+  <span style="color: #bc6ec5;">}</span>
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+
+</section>
+<section id="slide-orgheadline40">
+<h4 id="orgheadline40">Bruke objekter</h4>
+<div class="org-src-container">
+
+<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">Ball</span> <span style="color: #7590db;">ball</span> = <span style="color: #4f97d7; font-weight: bold;">new</span> <span style="color: #ce537a; font-weight: bold;">Ball</span><span style="color: #4f97d7;">(</span><span style="color: #a45bad;">200</span>, <span style="color: #a45bad;">200</span><span style="color: #4f97d7;">)</span>;
+...
+<span style="color: #ce537a; font-weight: bold;">void</span> draw<span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">background</span><span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">0</span><span style="color: #bc6ec5;">)</span>;
+  ball.draw<span style="color: #bc6ec5;">()</span>;
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+
+</section>
+<section id="slide-orgheadline41">
+<h4 id="orgheadline41">Oppgaver</h4>
+<ul>
+<li>Legg til hastighet i ballen og spretting i kantene</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline50">
+<h2 id="orgheadline50">Lister</h2>
+<ul>
+<li>Den enkleste varianten er en spesiell type
+<ul>
+<li>Kalles array</li>
+<li>Krever mer manuell jobb</li>
+
+</ul></li>
+<li>Det finnes varianter som er sammensatte typer:
+<ul>
+<li>ArrayList, LinkedList, etc.</li>
+
+</ul></li>
+<li>La oss se på den første:</li>
+
+</ul>
+
+</section>
+<section id="slide-orgheadline44">
+<h3 id="orgheadline44">Opprette</h3>
+<ul>
+<li>Må angi antall elementer i listen</li>
+<li>Alle verdiene er satt til det som tilsvarer <code>0</code></li>
+
+</ul>
+
+<div class="org-src-container">
+
+<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">float</span><span style="color: #4f97d7;">[]</span> <span style="color: #7590db;">floatList</span> = <span style="color: #4f97d7; font-weight: bold;">new</span> <span style="color: #ce537a; font-weight: bold;">float</span><span style="color: #4f97d7;">[</span><span style="color: #a45bad;">100</span><span style="color: #4f97d7;">]</span>;
+<span style="color: #ce537a; font-weight: bold;">MyType</span><span style="color: #4f97d7;">[]</span> <span style="color: #7590db;">myObjects</span> = <span style="color: #4f97d7; font-weight: bold;">new</span> <span style="color: #ce537a; font-weight: bold;">MyType</span><span style="color: #4f97d7;">[</span><span style="color: #a45bad;">10</span><span style="color: #4f97d7;">]</span>;
+</pre>
+</div>
+
+</section>
+<section id="slide-orgheadline45">
+<h3 id="orgheadline45">Sette verdier</h3>
+<ul>
+<li>Får tilgang til elementer med klammer og nummer i listen</li>
+<li>Nummer i listen begynner på <code>0</code> og slutter på <code>antall - 1</code></li>
+<li>Kan bruke regnestykker til indeks</li>
+
+</ul>
+
+<div class="org-src-container">
+
+<pre  class="src src-processing">floatList<span style="color: #4f97d7;">[</span><span style="color: #a45bad;">0</span><span style="color: #4f97d7;">]</span> = <span style="color: #a45bad;">3</span>.<span style="color: #a45bad;">14</span>;
+myObjects<span style="color: #4f97d7;">[</span><span style="color: #a45bad;">9</span><span style="color: #4f97d7;">]</span> = <span style="color: #4f97d7; font-weight: bold;">new</span> <span style="color: #ce537a; font-weight: bold;">MyType</span><span style="color: #4f97d7;">()</span>;
+floatList<span style="color: #4f97d7;">[</span>floatList.length - <span style="color: #a45bad;">1</span><span style="color: #4f97d7;">]</span> = <span style="color: #a45bad;">99</span>.<span style="color: #a45bad;">9</span>;
+</pre>
+</div>
+
+</section>
+<section id="slide-orgheadline48">
+<h3 id="orgheadline48">Løpe gjennom og bruke</h3>
+<ul>
+<li>Kan bruke en veldig enkel løkke hvis
+<ul>
+<li>Vi bare trenger verdien</li>
+<li>Ikke skal endre på listen</li>
+<li>Bare skal bruke elementer fra én liste</li>
+
+</ul></li>
+<li>Må bruke en litt mer tungvint variant ellers</li>
+
+</ul>
+
+</section>
+<section id="slide-orgheadline46">
+<h4 id="orgheadline46">For-each-løkke</h4>
+<div class="org-src-container">
+
+<pre  class="src src-processing"><span style="color: #4f97d7; font-weight: bold;">for</span> <span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">MyType</span> <span style="color: #7590db;">myObject</span> : myObjects<span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  myObject.draw<span style="color: #bc6ec5;">()</span>;
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+
+</section>
+<section id="slide-orgheadline47">
+<h4 id="orgheadline47">For-løkke</h4>
+<div class="org-src-container">
+
+<pre  class="src src-processing"><span style="color: #4f97d7; font-weight: bold;">for</span> <span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">i</span> = <span style="color: #a45bad;">0</span>; i &lt; floatList.<span style="color: #ce537a; font-weight: bold;">length</span>; i++<span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  floatList<span style="color: #bc6ec5;">[</span>i<span style="color: #bc6ec5;">]</span> += <span style="color: #a45bad;">0</span>.<span style="color: #a45bad;">1</span>;
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+</section>
+<section id="slide-orgheadline49">
+<h3 id="orgheadline49">Oppgaver</h3>
+<ul>
+<li>Vha. en liste med baller få mange baller til å sprette rundt i vinduet</li>
 
 </ul>
 </section>
 </section>
 </div>
 </div>
-<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
-<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.js"></script>
+<script src="./reveal.js/lib/js/head.min.js"></script>
+<script src="./reveal.js/js/reveal.js"></script>
 
 <script>
 // Full list of configuration options available here:
@@ -664,11 +914,11 @@ multiplex: {
 
 // Optional libraries used to extend on reveal.js
 dependencies: [
- { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
- { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
- { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
- { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
- { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+ { src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: './reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
 });
 </script>
 </body>

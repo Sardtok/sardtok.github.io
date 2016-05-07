@@ -3,7 +3,6 @@
 #+AUTHOR: Rustam Mehmandarov og Sigmund Hansen
 #+EMAIL: rm@computas.com sha@computas.com
 #+REVEAL_THEME: night
-#+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/3.0.0/
 #+REVEAL_EXTRA_CSS: bigsource.css
 
 * Før vi begynner
@@ -23,29 +22,31 @@ void setup() {
 }
 
 void draw() {
+  background(0);
   rect(100, 100, 200, 200);
 }
 #+END_SRC
 
 ** Oppgaver
 
+- Finn ut hva tallene gjør og:
 - Endre størrelsen på vinduet
 - Endre størrelsen på firkanten
 - Endre posisjonen til firkanten
 - Tegn flere firkanter
+- Hva skjer hvis du fjerner ~background(0);~?
 
 * Ellipser
 
-- src_processing{ellipse(x, y, bredde, høyde);} tegner en ellipse
-- Skriv inn følgende og kjør den ved å trykke på pilen:
+- Tegn en ellipse med:
 
 #+BEGIN_SRC processing
-  ellipse(100, 100, 200, 200);
+  ellipse(x, y, bredde, høyde);
 #+END_SRC
 
 ** Oppgaver
 
-- Flytt sirkelen til midten av vinduet
+- Tegn en sirkel midt i vinduet
 - Tegn et ansikt med ellipser
   - Ikke bruk bare sirkler, men varier bredde og høyde
 
@@ -172,6 +173,7 @@ void setup() {
 }
 
 void draw() {
+  background(0);
   ellipse(x, 200, 50, 50);
 }
 #+END_SRC
@@ -362,8 +364,167 @@ ellipse(mouseX, mouseY, 50, 50);
 * Sammensatte datatyper
 
 - Typer som ikke har en spesiell plass
+- Typisk bygget opp av flere variabler
+- Kan ha "oppførsel"
 - Du kan lage dine egne
-- Det finnes mange slike
+- Det finnes mange slike fra før
 - Processings egne begynner typisk med stor P: \\
   PShape, PImage, osv.
-- Vi kommer tilbake til disse senere
+
+** Bilder
+
+- Lag en mappe som heter data i prosjektmappen
+- Lagre bildefilen her
+- Bilder kan ikke lastes inn før ~setup~
+- Laste inn og tegne bilder:
+
+#+BEGIN_SRC processing
+PImage bilde;
+
+void setup() {
+  size(400, 400);
+  bilde = loadImage("bilde.png");
+}
+
+void draw() {
+  background(0);
+  image(bilde, 200, 200);
+}
+#+END_SRC
+
+*** Oppgaver
+
+- Hva skjer om du fjerner innlastingen?
+- Midtstill bildet:
+  - Slå opp ~imageMode~ i referansen
+  - Legg til et kall på ~imageMode~ i ~setup~
+
+** Egendefinerte typer
+
+- Sammensatte typer lages av klasser
+- Når vi lager noe av denne typen kalles de objekter
+- Kan minne om Platons idélære
+- Vi kan definere egne typer med:
+
+#+BEGIN_SRC processing
+class TypeNavn {
+...
+}
+#+END_SRC
+
+*** Variabler
+
+- Ser ut som vanlig
+- Plasseres mellom krøllparentesene
+
+#+BEGIN_SRC processing
+class Ball {
+  float x;
+  float y;
+}
+#+END_SRC
+
+*** Konstruktør
+
+- Brukes til å opprette objekter av klassen
+- Har samme navn som klassen
+
+#+BEGIN_SRC processing
+class Ball {
+  float x;
+  float y;
+
+  Ball(float x, float y) {
+    this.x = x;
+    this.y = y;
+  }
+}
+#+END_SRC
+
+*** Oppførsel
+
+- Kan lage metoder
+  - ~setup~, ~draw~ er metoder du har sett før
+- Kan være lurt med egen ~draw~-metode
+
+#+BEGIN_SRC  processing
+class Ball {
+...
+  void draw() {
+    ellipsse(x, y, 50, 50);
+  }
+}
+#+END_SRC
+
+*** Bruke objekter
+
+#+BEGIN_SRC processing
+Ball ball = new Ball(200, 200);
+...
+void draw() {
+  background(0);
+  ball.draw();
+}
+#+END_SRC
+
+*** Oppgaver
+
+- Legg til hastighet i ballen og spretting i kantene
+
+* Lister
+
+- Den enkleste varianten er en spesiell type
+  - Kalles array
+  - Krever mer manuell jobb
+- Det finnes varianter som er sammensatte typer:
+  - ArrayList, LinkedList, etc.
+- La oss se på den første:
+
+** Opprette
+
+- Må angi antall elementer i listen
+- Alle verdiene er satt til det som tilsvarer ~0~
+
+#+BEGIN_SRC processing
+float[] floatList = new float[100];
+MyType[] myObjects = new MyType[10];
+#+END_SRC
+
+** Sette verdier
+
+- Får tilgang til elementer med klammer og nummer i listen
+- Nummer i listen begynner på ~0~ og slutter på ~antall - 1~
+- Kan bruke regnestykker til indeks
+
+#+BEGIN_SRC processing
+floatList[0] = 3.14;
+myObjects[9] = new MyType();
+floatList[floatList.length - 1] = 99.9;
+#+END_SRC
+
+** Løpe gjennom og bruke
+
+- Kan bruke en veldig enkel løkke hvis
+  - Vi bare trenger verdien
+  - Ikke skal endre på listen
+  - Bare skal bruke elementer fra én liste
+- Må bruke en litt mer tungvint variant ellers
+
+*** For-each-løkke
+
+#+BEGIN_SRC processing
+for (MyType myObject : myObjects) {
+  myObject.draw();
+}
+#+END_SRC
+
+*** For-løkke
+
+#+BEGIN_SRC processing
+for (int i = 0; i < floatList.length; i++) {
+  floatList[i] += 0.1;
+}
+#+END_SRC
+** Oppgaver
+
+- Vha. en liste med baller få mange baller til å sprette rundt i vinduet
