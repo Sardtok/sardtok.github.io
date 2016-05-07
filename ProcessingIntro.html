@@ -532,9 +532,8 @@ men bare på det første av uttrykkene som er sanne:</li>
 <span style="color: #4f97d7;">}</span>
 
 <span style="color: #8cc4ff; font-weight: bold;">void</span> <span style="color: #fce94f; font-weight: bold;">draw</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
-  <span style="color: #8cc4ff; font-weight: bold;">float</span> <span style="color: #fcaf3e;">xSpeed</span> = <span style="color: #e9b2e3;">0</span>;
   <span style="color: #b4fa70; font-weight: bold;">if</span> <span style="color: #bc6ec5;">(</span>left<span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
-    xSpeed = xSpeed - <span style="color: #e9b2e3;">2</span>.<span style="color: #e9b2e3;">5</span>;
+    x = x - <span style="color: #e9b2e3;">2</span>.<span style="color: #e9b2e3;">5</span>;
   <span style="color: #bc6ec5;">}</span>
 ...
 <span style="color: #4f97d7;">}</span>
@@ -685,6 +684,7 @@ PShape, PImage, osv.</li>
 <li>Sammensatte typer lages av klasser</li>
 <li>Når vi lager noe av denne typen kalles de objekter</li>
 <li>Kan minne om Platons idélære</li>
+<li>Det kan være lurt å lage en egen fane for hver type</li>
 <li>Vi kan definere egne typer med:</li>
 
 </ul>
@@ -810,14 +810,15 @@ PShape, PImage, osv.</li>
 <h3 id="orgheadline44">Opprette</h3>
 <ul>
 <li>Må angi antall elementer i listen</li>
-<li>Alle verdiene er satt til det som tilsvarer <code>0</code></li>
+<li>Alle verdiene er satt til det som tilsvarer <code>0</code> <br  />
+Dette fører ofte til feil i programmer</li>
 
 </ul>
 
 <div class="org-src-container">
 
 <pre  class="src src-processing"><span style="color: #8cc4ff; font-weight: bold;">float</span><span style="color: #4f97d7;">[]</span> <span style="color: #fcaf3e;">floatList</span> = <span style="color: #b4fa70; font-weight: bold;">new</span> <span style="color: #8cc4ff; font-weight: bold;">float</span><span style="color: #4f97d7;">[</span><span style="color: #e9b2e3;">100</span><span style="color: #4f97d7;">]</span>;
-<span style="color: #8cc4ff; font-weight: bold;">MyType</span><span style="color: #4f97d7;">[]</span> <span style="color: #fcaf3e;">myObjects</span> = <span style="color: #b4fa70; font-weight: bold;">new</span> <span style="color: #8cc4ff; font-weight: bold;">MyType</span><span style="color: #4f97d7;">[</span><span style="color: #e9b2e3;">10</span><span style="color: #4f97d7;">]</span>;
+<span style="color: #8cc4ff; font-weight: bold;">Ball</span><span style="color: #4f97d7;">[]</span> <span style="color: #fcaf3e;">balls</span> = <span style="color: #b4fa70; font-weight: bold;">new</span> <span style="color: #8cc4ff; font-weight: bold;">Ball</span><span style="color: #4f97d7;">[</span><span style="color: #e9b2e3;">10</span><span style="color: #4f97d7;">]</span>;
 </pre>
 </div>
 
@@ -828,13 +829,15 @@ PShape, PImage, osv.</li>
 <li>Får tilgang til elementer med klammer og nummer i listen</li>
 <li>Nummer i listen begynner på <code>0</code> og slutter på <code>antall - 1</code></li>
 <li>Kan bruke regnestykker til indeks</li>
+<li>Merk at <code>length</code> er en variabel i alle slike lister
+som gir oss hvor mange plasser som finnes</li>
 
 </ul>
 
 <div class="org-src-container">
 
 <pre  class="src src-processing">floatList<span style="color: #4f97d7;">[</span><span style="color: #e9b2e3;">0</span><span style="color: #4f97d7;">]</span> = <span style="color: #e9b2e3;">3</span>.<span style="color: #e9b2e3;">14</span>;
-myObjects<span style="color: #4f97d7;">[</span><span style="color: #e9b2e3;">9</span><span style="color: #4f97d7;">]</span> = <span style="color: #b4fa70; font-weight: bold;">new</span> <span style="color: #8cc4ff; font-weight: bold;">MyType</span><span style="color: #4f97d7;">()</span>;
+balls<span style="color: #4f97d7;">[</span><span style="color: #e9b2e3;">9</span><span style="color: #4f97d7;">]</span> = <span style="color: #b4fa70; font-weight: bold;">new</span> <span style="color: #8cc4ff; font-weight: bold;">Ball</span><span style="color: #4f97d7;">()</span>;
 floatList<span style="color: #4f97d7;">[</span>floatList.length - <span style="color: #e9b2e3;">1</span><span style="color: #4f97d7;">]</span> = <span style="color: #e9b2e3;">99</span>.<span style="color: #e9b2e3;">9</span>;
 </pre>
 </div>
@@ -857,10 +860,18 @@ floatList<span style="color: #4f97d7;">[</span>floatList.length - <span style="c
 </section>
 <section id="slide-orgheadline46">
 <h4 id="orgheadline46">For-each-løkke</h4>
+<ul>
+<li>Skrives <code>for (Type navn : liste)</code></li>
+<li>Leses for hver Type, navn, i liste</li>
+<li>Koden under kan da leses: <br  />
+for hver Ball, ball, i balls, draw ball</li>
+
+</ul>
+
 <div class="org-src-container">
 
-<pre  class="src src-processing"><span style="color: #b4fa70; font-weight: bold;">for</span> <span style="color: #4f97d7;">(</span><span style="color: #8cc4ff; font-weight: bold;">MyType</span> <span style="color: #fcaf3e;">myObject</span> : myObjects<span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
-  myObject.draw<span style="color: #bc6ec5;">()</span>;
+<pre  class="src src-processing"><span style="color: #b4fa70; font-weight: bold;">for</span> <span style="color: #4f97d7;">(</span><span style="color: #8cc4ff; font-weight: bold;">Ball</span> <span style="color: #fcaf3e;">ball</span> : balls<span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  ball.draw<span style="color: #bc6ec5;">()</span>;
 <span style="color: #4f97d7;">}</span>
 </pre>
 </div>
@@ -875,11 +886,23 @@ floatList<span style="color: #4f97d7;">[</span>floatList.length - <span style="c
 <span style="color: #4f97d7;">}</span>
 </pre>
 </div>
+
 </section>
 <section id="slide-orgheadline49">
 <h3 id="orgheadline49">Oppgaver</h3>
 <ul>
-<li>Vha. en liste med baller få mange baller til å sprette rundt i vinduet</li>
+<li>Lag en liste med baller og få dem til å sprette rundt i vinduet</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline51">
+<h2 id="orgheadline51">Nyttige lenker</h2>
+<ul>
+<li>[<a href="http://kodeklubben.github.io">http://kodeklubben.github.io</a>] - Oppgave brukt av Lær Kidsa Koding, tar også for seg andre språk</li>
+<li>[<a href="http://vestera.as/processing">http://vestera.as/processing</a>] - Prøv Processing i nettleseren med mange små oppgaver</li>
 
 </ul>
 </section>

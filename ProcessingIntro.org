@@ -309,9 +309,8 @@ void keyPressed() {
 }
 
 void draw() {
-  float xSpeed = 0;
   if (left) {
-    xSpeed = xSpeed - 2.5;
+    x = x - 2.5;
   }
 ...
 }
@@ -404,6 +403,7 @@ void draw() {
 - Sammensatte typer lages av klasser
 - Når vi lager noe av denne typen kalles de objekter
 - Kan minne om Platons idélære
+- Det kan være lurt å lage en egen fane for hver type
 - Vi kan definere egne typer med:
 
 #+BEGIN_SRC processing
@@ -483,11 +483,12 @@ void draw() {
 ** Opprette
 
 - Må angi antall elementer i listen
-- Alle verdiene er satt til det som tilsvarer ~0~
+- Alle verdiene er satt til det som tilsvarer ~0~ \\
+  Dette fører ofte til feil i programmer
 
 #+BEGIN_SRC processing
 float[] floatList = new float[100];
-MyType[] myObjects = new MyType[10];
+Ball[] balls = new Ball[10];
 #+END_SRC
 
 ** Sette verdier
@@ -495,10 +496,12 @@ MyType[] myObjects = new MyType[10];
 - Får tilgang til elementer med klammer og nummer i listen
 - Nummer i listen begynner på ~0~ og slutter på ~antall - 1~
 - Kan bruke regnestykker til indeks
+- Merk at ~length~ er en variabel i alle slike lister
+  som gir oss hvor mange plasser som finnes
 
 #+BEGIN_SRC processing
 floatList[0] = 3.14;
-myObjects[9] = new MyType();
+balls[9] = new Ball();
 floatList[floatList.length - 1] = 99.9;
 #+END_SRC
 
@@ -512,9 +515,14 @@ floatList[floatList.length - 1] = 99.9;
 
 *** For-each-løkke
 
+- Skrives ~for (Type navn : liste)~
+- Leses for hver Type, navn, i liste
+- Koden under kan da leses: \\
+  for hver Ball, ball, i balls, draw ball
+
 #+BEGIN_SRC processing
-for (MyType myObject : myObjects) {
-  myObject.draw();
+for (Ball ball : balls) {
+  ball.draw();
 }
 #+END_SRC
 
@@ -525,6 +533,12 @@ for (int i = 0; i < floatList.length; i++) {
   floatList[i] += 0.1;
 }
 #+END_SRC
+
 ** Oppgaver
 
-- Vha. en liste med baller få mange baller til å sprette rundt i vinduet
+- Lag en liste med baller og få dem til å sprette rundt i vinduet
+
+* Nyttige lenker
+
+- [http://kodeklubben.github.io] - Oppgave brukt av Lær Kidsa Koding, tar også for seg andre språk
+- [http://vestera.as/processing] - Prøv Processing i nettleseren med mange små oppgaver
