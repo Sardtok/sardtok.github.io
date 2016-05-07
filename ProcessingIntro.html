@@ -289,6 +289,11 @@ eller usann (<code>false</code>)</li>
 
 <pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">color</span> <span style="color: #7590db;">c1</span> = #ff8040;
 <span style="color: #ce537a; font-weight: bold;">color</span> <span style="color: #7590db;">c2</span> = <span style="color: #4f97d7; font-weight: bold;">color</span><span style="color: #4f97d7;">(</span><span style="color: #a45bad;">255</span>, <span style="color: #a45bad;">128</span>, <span style="color: #a45bad;">64</span><span style="color: #4f97d7;">)</span>;
+...
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Brukes gjerne med:</span>
+<span style="color: #4f97d7; font-weight: bold;">background</span><span style="color: #4f97d7;">(</span>c1<span style="color: #4f97d7;">)</span>;
+<span style="color: #4f97d7; font-weight: bold;">fill</span><span style="color: #4f97d7;">(</span>#<span style="color: #a45bad;">4080ff</span><span style="color: #4f97d7;">)</span>;
+<span style="color: #4f97d7; font-weight: bold;">stroke</span><span style="color: #4f97d7;">(</span><span style="color: #a45bad;">128</span>, <span style="color: #a45bad;">255</span>, <span style="color: #a45bad;">64</span><span style="color: #4f97d7;">)</span>;
 </pre>
 </div>
 
@@ -577,8 +582,47 @@ sånn at du kan styre ballen med tastaturet.</li>
 </section>
 </section>
 <section>
+<section id="slide-orgheadline34">
+<h2 id="orgheadline34">Mus</h2>
+<ul>
+<li>Musposisjon i egne variabler:
+<ul>
+<li><code>mouseX</code></li>
+<li><code>mouseY</code></li>
+
+</ul></li>
+<li>Musetrykk håndteres som tastetrykk:
+<ul>
+<li><code>mouseClicked</code> - Klikk</li>
+<li><code>mousePressed</code> - Knapp trykket inn</li>
+<li><code>mouseReleased</code> - Knapp sluppet opp</li>
+<li>Og flere andre (se hjelpesidene til Processing)</li>
+
+</ul></li>
+
+</ul>
+
+<div class="org-src-container">
+
+<pre  class="src src-processing"><span style="color: #4f97d7; font-weight: bold;">ellipse</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7;">mouseX</span>, <span style="color: #4f97d7;">mouseY</span>, <span style="color: #a45bad;">50</span>, <span style="color: #a45bad;">50</span><span style="color: #4f97d7;">)</span>;
+</pre>
+</div>
+
+</section>
 <section id="slide-orgheadline33">
-<h2 id="orgheadline33">Sammensatte datatyper</h2>
+<h3 id="orgheadline33">Oppgaver</h3>
+<ul>
+<li>Endre fargen på sirkelen når museknappen er trykket inn.
+Husk at fargen skal gå tilbake til hvit når museknappen er sluppet opp. <br  />
+Hint: <code>fill(farge)</code> setter fargen på det du skal tegne.</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline35">
+<h2 id="orgheadline35">Sammensatte datatyper</h2>
 <ul>
 <li>Typer som ikke har en spesiell plass</li>
 <li>Du kan lage dine egne</li>

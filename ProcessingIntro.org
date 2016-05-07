@@ -152,6 +152,11 @@ String text = "Can I haz cheezeburger?";
 #+BEGIN_SRC processing
 color c1 = #ff8040;
 color c2 = color(255, 128, 64);
+...
+// Brukes gjerne med:
+background(c1);
+fill(#4080ff);
+stroke(128, 255, 64);
 #+END_SRC
 
 ** Oppgaver
@@ -333,6 +338,26 @@ void keyReleased() {
 *** Oppgaver
 - Skriv ferdig koden i ~keyReleased~ \\
   sånn at du kan styre ballen med tastaturet.
+
+* Mus
+- Musposisjon i egne variabler:
+  - ~mouseX~
+  - ~mouseY~
+- Musetrykk håndteres som tastetrykk:
+  - ~mouseClicked~ - Klikk
+  - ~mousePressed~ - Knapp trykket inn
+  - ~mouseReleased~ - Knapp sluppet opp
+  - Og flere andre (se hjelpesidene til Processing)
+
+#+BEGIN_SRC processing
+ellipse(mouseX, mouseY, 50, 50);
+#+END_SRC
+
+** Oppgaver
+
+- Endre fargen på sirkelen når museknappen er trykket inn.
+  Husk at fargen skal gå tilbake til hvit når museknappen er sluppet opp. \\
+  Hint: ~fill(farge)~ setter fargen på det du skal tegne.
 
 * Sammensatte datatyper
 
