@@ -1,6 +1,6 @@
 #+OPTIONS: toc:nil email:nil H:4 num:nil ^:nil
 #+TITLE: Introduksjon til Processing
-#+AUTHOR: Rustam Mehmandarov og Sigmund Hansen
+#+AUTHOR: Kine Gjerstad Eide, Rustam Mehmandarov og Sigmund Hansen
 #+EMAIL: rm@computas.com sha@computas.com
 #+REVEAL_THEME: night
 #+REVEAL_EXTRA_CSS: bigsource.css
