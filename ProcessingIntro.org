@@ -1,13 +1,13 @@
-#+OPTIONS: toc:nil email:nil H:4 num:nil ^:nil
+
+#+OPTIONS: toc:nil H:4 num:nil ^:nil
 #+TITLE: Introduksjon til Processing
-#+AUTHOR: Kine Gjerstad Eide, Rustam Mehmandarov og Sigmund Hansen
-#+EMAIL: rm@computas.com sha@computas.com
+#+AUTHOR: Rustam Mehmandarov og Sigmund Hansen
 #+REVEAL_THEME: night
 #+REVEAL_EXTRA_CSS: bigsource.css
 
 * Før vi begynner
 
-- Har du lastet ned og pakket ut Processing?
+- Har du lastet ned og pakket ut [[https://processing.org][Processing]]?
 - Hva er Processing?
 - Hva er programmering?
 
@@ -540,5 +540,5 @@ for (int i = 0; i < floatList.length; i++) {
 
 * Nyttige lenker
 
-- [http://kodeklubben.github.io] - Oppgave brukt av Lær Kidsa Koding, tar også for seg andre språk
-- [http://vestera.as/processing] - Prøv Processing i nettleseren med mange små oppgaver
+- https://oppgaver.kidsakoder.no - Oppgave brukt av Lær Kidsa Koding, tar også for seg andre språk
+- http://vestera.as/processing - Prøv Processing i nettleseren med mange små oppgaver
