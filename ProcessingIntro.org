@@ -1,5 +1,4 @@
-
-#+OPTIONS: toc:nil H:4 num:nil ^:nil
+#+OPTIONS: toc:nil H:4 num:nil ^:nil reveal_title_slide:"<h1>%t</h1><h2>%a</h2>"
 #+TITLE: Introduksjon til Processing
 #+AUTHOR: Rustam Mehmandarov og Sigmund Hansen
 #+REVEAL_THEME: night
