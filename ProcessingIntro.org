@@ -10,6 +10,18 @@
 - Hva er Processing?
 - Hva er programmering?
 
+** Spesielle tegn
+
+|-------+-------------------+-----------------|
+| Tegn  | Windows           | Mac             |
+|-------+-------------------+-----------------|
+| {     | AltGr + 7         | Alt + Shift + 8 |
+| }     | AltGr + 0         | Alt + Shift + 9 |
+| [     | AltGr + 8         | Alt + 8         |
+| ]     | AltGr + 9         | Alt + 9         |
+| \vert | Til venstre for 1 | Alt + 7         |
+|-------+-------------------+-----------------|
+
 * Ditt første program
 
 - Start Processing
@@ -94,7 +106,8 @@ Her er ~x1~ og ~y1~ posisjonen til det første hjørnet
 - Angir alltid typen: \\
   ~type navn = startverdi;~
 - Til nå bare tall
-- La oss se på noen spesielle typer:
+- Deles inn i primitive og sammensatte typer
+- La oss se på noen typer:
 
 *** Heltall
 - ~int~ (kort for integer)
@@ -347,7 +360,7 @@ void keyReleased() {
   - ~mouseClicked~ - Klikk
   - ~mousePressed~ - Knapp trykket inn
   - ~mouseReleased~ - Knapp sluppet opp
-  - Og flere andre (se hjelpesidene til Processing)
+  - Og flere andre (se [[https://processing.org/reference/][hjelpesidene til Processing]])
 
 #+BEGIN_SRC processing
 ellipse(mouseX, mouseY, 50, 50);
@@ -450,7 +463,7 @@ class Ball {
 class Ball {
 ...
   void draw() {
-    ellipsse(x, y, 50, 50);
+    ellipse(x, y, 50, 50);
   }
 }
 #+END_SRC
@@ -526,6 +539,9 @@ for (Ball ball : balls) {
 #+END_SRC
 
 *** For-løkke
+
+- Nyttig med primitive typer
+- Kan brukes til andre ting enn lister
 
 #+BEGIN_SRC processing
 for (int i = 0; i < floatList.length; i++) {
