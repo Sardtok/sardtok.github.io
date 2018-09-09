@@ -540,8 +540,9 @@ for (Ball ball : balls) {
 
 *** For-løkke
 
-- Nyttig med primitive typer
-- Kan brukes til andre ting enn lister
+- Skrives ~for (oppsett; test; oppdatering)~
+- Leses ikke like enkelt som en for-each
+- Sett opp, og så lenge test, gjør noe og kjør oppdatering
 
 #+BEGIN_SRC processing
 for (int i = 0; i < floatList.length; i++) {
@@ -552,6 +553,69 @@ for (int i = 0; i < floatList.length; i++) {
 ** Oppgaver
 
 - Lag en liste med baller og få dem til å sprette rundt i vinduet
+- Ekstra utfordring, bruk [[https://processing.org/reference/dist_.html][dist(x1, y1, x2, y2)]] og få ballene til å sprette i hverandre
+
+* Avanserte lister
+
+- Lar oss legge til og fjerne innholdet enkelt
+- Kan fjerne basert på posisjon eller objekt
+- Kan hente ut basert på posisjon
+- Kan bruke for-each som før
+
+#+BEGIN_SRC processing
+ArrayList<Ball> balls = new ArrayList<Ball>();
+Ball ball1 = new Ball(200, 200);
+Ball ball2 = new Ball(300, 300);
+balls.add(ball1);
+balls.add(ball2);
+
+balls.get(1).draw();
+
+balls.remove(ball1);
+balls.remove(0);
+#+END_SRC
+
+** Oppgaver
+
+- Bytt ut den gamle listen med den avanserte varianten
+
+* Spill - Ball Buster
+
+- Baller spretter rundt på skjermen
+- Klikk på dem for å ødelegge dem
+- Ødelegg alle ballene før tiden går ut
+- Flere baller eller kortere tid for hvert brett
+
+** Ødelegge ballene
+
+- Lag en ~mouseClicked~
+- Løp gjennom ballene
+- Se om avstand fra muspeker til ballen er mindre enn radien
+- I så fall, fjern ballen fra listen
+
+** Nedtelling
+
+- Variabel for når tiden går ut: ~int timeOut = millis() + 30000;~
+  - Husk å bare sette denne når et brett begynner
+- Sjekke om tiden har gått ut ~if (millis() >= timeOut) ...~
+- Vise nedtellingen:
+
+#+BEGIN_SRC processing
+int timeLeft = timeOut - millis();
+int seconds = timeLeft / 1000;
+textAlign(CENTER);
+text(seconds, width / 2, 20);
+#+END_SRC
+
+** Tiden løper ut
+
+
+* Spill - Bouncy Ball
+
+- Styr en sprettball med tastaturet
+- Sprett på og ødelegg baller som triller langs bakken
+- Unngå å treffe bakken
+- Øke hastigheten etter hvert
 
 * Nyttige lenker
 
