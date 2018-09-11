@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <title>Introduksjon til Processing</title>
-<meta name="author" content="(Rustam Mehmandarov og Sigmund Hansen)"/>
+<meta name="author" content="(Rustam Mehmandarov, Sigmund Hansen)"/>
 <style type="text/css">
 .underline { text-decoration: underline; }
 </style>
@@ -27,12 +27,12 @@
 <body>
 <div class="reveal">
 <div class="slides">
-<section id="sec-title-slide"><h1>Introduksjon til Processing</h1><h2>Rustam Mehmandarov og Sigmund Hansen</h2>
+<section id="sec-title-slide"><h1>Introduksjon til Processing</h1><h2>Rustam Mehmandarov, Sigmund Hansen</h2><h3><a href="mailto:rm@computas.com">rm@computas.com</a>, <a href="mailto:sigmund@sigmund-hansen.com">sigmund@sigmund-hansen.com</a></h3>
 </section>
 
 <section>
-<section id="slide-org4d4d6db">
-<h2 id="org4d4d6db">Før vi begynner</h2>
+<section id="slide-orgcd41e0f">
+<h2 id="orgcd41e0f">Før vi begynner</h2>
 <ul>
 <li>Har du lastet ned og pakket ut <a href="https://processing.org">Processing</a>?</li>
 <li>Hva er Processing?</li>
@@ -41,8 +41,8 @@
 </ul>
 
 </section>
-<section id="slide-orgd991169">
-<h3 id="orgd991169">Spesielle tegn</h3>
+<section id="slide-org0c4086f">
+<h3 id="org0c4086f">Spesielle tegn</h3>
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -96,8 +96,8 @@
 </section>
 </section>
 <section>
-<section id="slide-org8ef0087">
-<h2 id="org8ef0087">Ditt første program</h2>
+<section id="slide-org97b01fb">
+<h2 id="org97b01fb">Ditt første program</h2>
 <ul>
 <li>Start Processing</li>
 <li>Skriv inn følgende og kjør det ved å trykke på pilen:</li>
@@ -106,20 +106,20 @@
 
 <div class="org-src-container">
 
-<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">setup</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
-  <span style="color: #4f97d7; font-weight: bold;">size</span><span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">400</span>, <span style="color: #a45bad;">400</span><span style="color: #bc6ec5;">)</span>;
+<pre  class="src src-processing"><span style="color: #8cc4ff; font-weight: bold;">void</span> <span style="color: #fce94f; font-weight: bold;">setup</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #b4fa70; font-weight: bold;">size</span><span style="color: #bc6ec5;">(</span><span style="color: #e9b2e3;">400</span>, <span style="color: #e9b2e3;">400</span><span style="color: #bc6ec5;">)</span>;
 <span style="color: #4f97d7;">}</span>
 
-<span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">draw</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
-  <span style="color: #4f97d7; font-weight: bold;">background</span><span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">0</span><span style="color: #bc6ec5;">)</span>;
-  <span style="color: #4f97d7; font-weight: bold;">rect</span><span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">100</span>, <span style="color: #a45bad;">100</span>, <span style="color: #a45bad;">200</span>, <span style="color: #a45bad;">200</span><span style="color: #bc6ec5;">)</span>;
+<span style="color: #8cc4ff; font-weight: bold;">void</span> <span style="color: #fce94f; font-weight: bold;">draw</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #b4fa70; font-weight: bold;">background</span><span style="color: #bc6ec5;">(</span><span style="color: #e9b2e3;">0</span><span style="color: #bc6ec5;">)</span>;
+  <span style="color: #b4fa70; font-weight: bold;">rect</span><span style="color: #bc6ec5;">(</span><span style="color: #e9b2e3;">100</span>, <span style="color: #e9b2e3;">100</span>, <span style="color: #e9b2e3;">200</span>, <span style="color: #e9b2e3;">200</span><span style="color: #bc6ec5;">)</span>;
 <span style="color: #4f97d7;">}</span>
 </pre>
 </div>
 
 </section>
-<section id="slide-orgc7a7d40">
-<h3 id="orgc7a7d40">Oppgaver</h3>
+<section id="slide-orga597e31">
+<h3 id="orga597e31">Oppgaver</h3>
 <ul>
 <li>Finn ut hva tallene gjør og:</li>
 <li>Endre størrelsen på vinduet</li>
@@ -133,8 +133,8 @@
 </section>
 </section>
 <section>
-<section id="slide-org1c9ffe2">
-<h2 id="org1c9ffe2">Ellipser</h2>
+<section id="slide-orgf88b260">
+<h2 id="orgf88b260">Ellipser</h2>
 <ul>
 <li>Tegn en ellipse med:</li>
 
@@ -142,13 +142,13 @@
 
 <div class="org-src-container">
 
-<pre  class="src src-processing"><span style="color: #4f97d7; font-weight: bold;">ellipse</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">x</span>, <span style="color: #ce537a; font-weight: bold;">y</span>, <span style="color: #ce537a; font-weight: bold;">bredde</span>, <span style="color: #ce537a; font-weight: bold;">h&#248;yde</span><span style="color: #4f97d7;">)</span>;
+<pre  class="src src-processing"><span style="color: #b4fa70; font-weight: bold;">ellipse</span><span style="color: #4f97d7;">(</span><span style="color: #8cc4ff; font-weight: bold;">x</span>, <span style="color: #8cc4ff; font-weight: bold;">y</span>, <span style="color: #8cc4ff; font-weight: bold;">bredde</span>, <span style="color: #8cc4ff; font-weight: bold;">h&#248;yde</span><span style="color: #4f97d7;">)</span>;
 </pre>
 </div>
 
 </section>
-<section id="slide-org946aa99">
-<h3 id="org946aa99">Oppgaver</h3>
+<section id="slide-org24ee1d7">
+<h3 id="org24ee1d7">Oppgaver</h3>
 <ul>
 <li>Tegn en sirkel midt i vinduet</li>
 <li>Tegn et ansikt med ellipser
@@ -162,8 +162,8 @@
 </section>
 </section>
 <section>
-<section id="slide-org6a511e1">
-<h2 id="org6a511e1">Trekanter</h2>
+<section id="slide-org00d4d00">
+<h2 id="org00d4d00">Trekanter</h2>
 <ul>
 <li>Tegn en trekant med:</li>
 
@@ -171,7 +171,7 @@
 
 <div class="org-src-container">
 
-<pre  class="src src-processing"><span style="color: #4f97d7; font-weight: bold;">triangle</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">x1</span>, <span style="color: #ce537a; font-weight: bold;">y1</span>, <span style="color: #ce537a; font-weight: bold;">x2</span>, <span style="color: #ce537a; font-weight: bold;">y2</span>, <span style="color: #ce537a; font-weight: bold;">x3</span>, <span style="color: #ce537a; font-weight: bold;">y3</span><span style="color: #4f97d7;">)</span>;
+<pre  class="src src-processing"><span style="color: #b4fa70; font-weight: bold;">triangle</span><span style="color: #4f97d7;">(</span><span style="color: #8cc4ff; font-weight: bold;">x1</span>, <span style="color: #8cc4ff; font-weight: bold;">y1</span>, <span style="color: #8cc4ff; font-weight: bold;">x2</span>, <span style="color: #8cc4ff; font-weight: bold;">y2</span>, <span style="color: #8cc4ff; font-weight: bold;">x3</span>, <span style="color: #8cc4ff; font-weight: bold;">y3</span><span style="color: #4f97d7;">)</span>;
 </pre>
 </div>
 
@@ -180,8 +180,8 @@ Her er <code>x1</code> og <code>y1</code> posisjonen til det første hjørnet
 </p>
 
 </section>
-<section id="slide-org94aaa39">
-<h3 id="org94aaa39">Oppgaver</h3>
+<section id="slide-org62145cf">
+<h3 id="org62145cf">Oppgaver</h3>
 <ul>
 <li>Tegn tre trekanter som ser omtrent slik ut:</li>
 
@@ -196,8 +196,8 @@ Her er <code>x1</code> og <code>y1</code> posisjonen til det første hjørnet
 </section>
 </section>
 <section>
-<section id="slide-org41d9e91">
-<h2 id="org41d9e91">Mangekanter</h2>
+<section id="slide-orgc561b5a">
+<h2 id="orgc561b5a">Mangekanter</h2>
 <ul>
 <li>Man kan tegne former med mange kanter om man vil:</li>
 
@@ -205,17 +205,17 @@ Her er <code>x1</code> og <code>y1</code> posisjonen til det første hjørnet
 
 <div class="org-src-container">
 
-<pre  class="src src-processing"><span style="color: #4f97d7; font-weight: bold;">beginShape</span><span style="color: #4f97d7;">()</span>;
-<span style="color: #4f97d7; font-weight: bold;">vertex</span><span style="color: #4f97d7;">(</span><span style="color: #a45bad;">10</span>, <span style="color: #a45bad;">10</span><span style="color: #4f97d7;">)</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Legg til et hj&#248;rne</span>
-... <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Bytt ut ... med mange vertex-kall</span>
-<span style="color: #4f97d7; font-weight: bold;">vertex</span><span style="color: #4f97d7;">(</span><span style="color: #a45bad;">30</span>, <span style="color: #a45bad;">50</span><span style="color: #4f97d7;">)</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Legg til siste h&#248;rne</span>
-<span style="color: #4f97d7; font-weight: bold;">endShape</span><span style="color: #4f97d7;">(</span><span style="color: #a45bad;">CLOSE</span><span style="color: #4f97d7;">)</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">CLOSE - Koble sammen f&#248;rste og siste hj&#248;rne</span>
+<pre  class="src src-processing"><span style="color: #b4fa70; font-weight: bold;">beginShape</span><span style="color: #4f97d7;">()</span>;
+<span style="color: #b4fa70; font-weight: bold;">vertex</span><span style="color: #4f97d7;">(</span><span style="color: #e9b2e3;">10</span>, <span style="color: #e9b2e3;">10</span><span style="color: #4f97d7;">)</span>; <span style="color: #73d216; background-color: #292e34;">// </span><span style="color: #73d216; background-color: #292e34;">Legg til et hj&#248;rne</span>
+... <span style="color: #73d216; background-color: #292e34;">// </span><span style="color: #73d216; background-color: #292e34;">Bytt ut ... med mange vertex-kall</span>
+<span style="color: #b4fa70; font-weight: bold;">vertex</span><span style="color: #4f97d7;">(</span><span style="color: #e9b2e3;">30</span>, <span style="color: #e9b2e3;">50</span><span style="color: #4f97d7;">)</span>; <span style="color: #73d216; background-color: #292e34;">// </span><span style="color: #73d216; background-color: #292e34;">Legg til siste h&#248;rne</span>
+<span style="color: #b4fa70; font-weight: bold;">endShape</span><span style="color: #4f97d7;">(</span><span style="color: #e9b2e3;">CLOSE</span><span style="color: #4f97d7;">)</span>; <span style="color: #73d216; background-color: #292e34;">// </span><span style="color: #73d216; background-color: #292e34;">CLOSE - Koble sammen f&#248;rste og siste hj&#248;rne</span>
 </pre>
 </div>
 
 </section>
-<section id="slide-org0a02bd2">
-<h3 id="org0a02bd2">Oppgaver</h3>
+<section id="slide-org8e5174c">
+<h3 id="org8e5174c">Oppgaver</h3>
 <ul>
 <li>Legg til masse kanter og lag en form</li>
 <li>Hva skjer hvis du fjerner CLOSE?</li>
@@ -225,8 +225,8 @@ Her er <code>x1</code> og <code>y1</code> posisjonen til det første hjørnet
 </section>
 </section>
 <section>
-<section id="slide-org817325d">
-<h2 id="org817325d">Variabler</h2>
+<section id="slide-orge28eed5">
+<h2 id="orge28eed5">Variabler</h2>
 <ul>
 <li>Navngitte lagringsplasser for verdier</li>
 <li>Kan endre verdien under kjøring</li>
@@ -235,8 +235,8 @@ Her er <code>x1</code> og <code>y1</code> posisjonen til det første hjørnet
 </ul>
 
 </section>
-<section id="slide-orgf8a9cb6">
-<h3 id="orgf8a9cb6">Datatyper</h3>
+<section id="slide-orgc804950">
+<h3 id="orgc804950">Datatyper</h3>
 <ul>
 <li>Angir alltid typen: <br />
 <code>type navn = startverdi;</code></li>
@@ -247,8 +247,8 @@ Her er <code>x1</code> og <code>y1</code> posisjonen til det første hjørnet
 </ul>
 
 </section>
-<section id="slide-org225d857">
-<h4 id="org225d857">Heltall</h4>
+<section id="slide-org2d46597">
+<h4 id="org2d46597">Heltall</h4>
 <ul>
 <li><code>int</code> (kort for integer)</li>
 <li>Tall uten desimaler</li>
@@ -257,13 +257,13 @@ Her er <code>x1</code> og <code>y1</code> posisjonen til det første hjørnet
 
 <div class="org-src-container">
 
-<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">a</span> = <span style="color: #a45bad;">5</span>;
+<pre  class="src src-processing"><span style="color: #8cc4ff; font-weight: bold;">int</span> <span style="color: #fcaf3e;">a</span> = <span style="color: #e9b2e3;">5</span>;
 </pre>
 </div>
 
 </section>
-<section id="slide-orgca6e65b">
-<h4 id="orgca6e65b">Flyttall</h4>
+<section id="slide-orga76ed96">
+<h4 id="orga76ed96">Flyttall</h4>
 <ul>
 <li><code>float</code> (kort for floating point number)</li>
 <li>Tall med desimaler</li>
@@ -274,13 +274,13 @@ Her er <code>x1</code> og <code>y1</code> posisjonen til det første hjørnet
 
 <div class="org-src-container">
 
-<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">float</span> <span style="color: #7590db;">pi</span> = <span style="color: #a45bad;">3</span>.<span style="color: #a45bad;">14</span>;
+<pre  class="src src-processing"><span style="color: #8cc4ff; font-weight: bold;">float</span> <span style="color: #fcaf3e;">pi</span> = <span style="color: #e9b2e3;">3</span>.<span style="color: #e9b2e3;">14</span>;
 </pre>
 </div>
 
 </section>
-<section id="slide-org350ebb4">
-<h4 id="org350ebb4">Boolske verdier</h4>
+<section id="slide-orgeda3100">
+<h4 id="orgeda3100">Boolske verdier</h4>
 <ul>
 <li><code>boolean</code> (etter George Boole)</li>
 <li>Sannhetsverdier</li>
@@ -292,13 +292,13 @@ eller usann (<code>false</code>)</li>
 
 <div class="org-src-container">
 
-<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">boolean</span> <span style="color: #7590db;">awesome</span> = <span style="color: #a45bad;">true</span>;
+<pre  class="src src-processing"><span style="color: #8cc4ff; font-weight: bold;">boolean</span> <span style="color: #fcaf3e;">awesome</span> = <span style="color: #e9b2e3;">true</span>;
 </pre>
 </div>
 
 </section>
-<section id="slide-orgb2967d5">
-<h4 id="orgb2967d5">Tegn</h4>
+<section id="slide-orgd2ecbf6">
+<h4 id="orgd2ecbf6">Tegn</h4>
 <ul>
 <li><code>char</code> (kort for character)</li>
 <li>Bokstaver, tall og andre symboler</li>
@@ -308,13 +308,13 @@ eller usann (<code>false</code>)</li>
 
 <div class="org-src-container">
 
-<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">char</span> <span style="color: #7590db;">c</span> = <span style="color: #2d9574;">'c'</span>;
+<pre  class="src src-processing"><span style="color: #8cc4ff; font-weight: bold;">char</span> <span style="color: #fcaf3e;">c</span> = <span style="color: #e9b96e;">'c'</span>;
 </pre>
 </div>
 
 </section>
-<section id="slide-org9ead53a">
-<h4 id="org9ead53a">Strenger (tekst)</h4>
+<section id="slide-org0271eb2">
+<h4 id="org0271eb2">Strenger (tekst)</h4>
 <ul>
 <li><code>String</code> (en streng med tegn)</li>
 <li>En sammensatt datatype</li>
@@ -323,13 +323,13 @@ eller usann (<code>false</code>)</li>
 
 <div class="org-src-container">
 
-<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">String</span> <span style="color: #4f97d7; font-weight: bold;">text</span> = <span style="color: #2d9574;">"Can I haz cheezeburger?"</span>;
+<pre  class="src src-processing"><span style="color: #8cc4ff; font-weight: bold;">String</span> <span style="color: #b4fa70; font-weight: bold;">text</span> = <span style="color: #e9b96e;">"Can I haz cheezeburger?"</span>;
 </pre>
 </div>
 
 </section>
-<section id="slide-org6cc0c58">
-<h4 id="org6cc0c58">Farger</h4>
+<section id="slide-org8971093">
+<h4 id="org8971093">Farger</h4>
 <ul>
 <li><code>color</code></li>
 <li>Egentlig en <code>int</code></li>
@@ -341,19 +341,19 @@ eller usann (<code>false</code>)</li>
 
 <div class="org-src-container">
 
-<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">color</span> <span style="color: #7590db;">c1</span> = #ff8040;
-<span style="color: #ce537a; font-weight: bold;">color</span> <span style="color: #7590db;">c2</span> = <span style="color: #4f97d7; font-weight: bold;">color</span><span style="color: #4f97d7;">(</span><span style="color: #a45bad;">255</span>, <span style="color: #a45bad;">128</span>, <span style="color: #a45bad;">64</span><span style="color: #4f97d7;">)</span>;
+<pre  class="src src-processing"><span style="color: #8cc4ff; font-weight: bold;">color</span> <span style="color: #fcaf3e;">c1</span> = #ff8040;
+<span style="color: #8cc4ff; font-weight: bold;">color</span> <span style="color: #fcaf3e;">c2</span> = <span style="color: #b4fa70; font-weight: bold;">color</span><span style="color: #4f97d7;">(</span><span style="color: #e9b2e3;">255</span>, <span style="color: #e9b2e3;">128</span>, <span style="color: #e9b2e3;">64</span><span style="color: #4f97d7;">)</span>;
 ...
-<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Brukes gjerne med:</span>
-<span style="color: #4f97d7; font-weight: bold;">background</span><span style="color: #4f97d7;">(</span>c1<span style="color: #4f97d7;">)</span>;
-<span style="color: #4f97d7; font-weight: bold;">fill</span><span style="color: #4f97d7;">(</span>#<span style="color: #a45bad;">4080ff</span><span style="color: #4f97d7;">)</span>;
-<span style="color: #4f97d7; font-weight: bold;">stroke</span><span style="color: #4f97d7;">(</span><span style="color: #a45bad;">128</span>, <span style="color: #a45bad;">255</span>, <span style="color: #a45bad;">64</span><span style="color: #4f97d7;">)</span>;
+<span style="color: #73d216; background-color: #292e34;">// </span><span style="color: #73d216; background-color: #292e34;">Brukes gjerne med:</span>
+<span style="color: #b4fa70; font-weight: bold;">background</span><span style="color: #4f97d7;">(</span>c1<span style="color: #4f97d7;">)</span>;
+<span style="color: #b4fa70; font-weight: bold;">fill</span><span style="color: #4f97d7;">(</span>#<span style="color: #e9b2e3;">4080ff</span><span style="color: #4f97d7;">)</span>;
+<span style="color: #b4fa70; font-weight: bold;">stroke</span><span style="color: #4f97d7;">(</span><span style="color: #e9b2e3;">128</span>, <span style="color: #e9b2e3;">255</span>, <span style="color: #e9b2e3;">64</span><span style="color: #4f97d7;">)</span>;
 </pre>
 </div>
 
 </section>
-<section id="slide-org5f5efee">
-<h3 id="org5f5efee">Oppgaver</h3>
+<section id="slide-org643bec3">
+<h3 id="org643bec3">Oppgaver</h3>
 <ul>
 <li>Hvor kan du ellers bruke variabler i programmet under?</li>
 <li>Hvilke datatyper vil du bruke på de forskjellige stedene?</li>
@@ -362,15 +362,15 @@ eller usann (<code>false</code>)</li>
 
 <div class="org-src-container">
 
-<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">float</span> <span style="color: #7590db;">x</span> = <span style="color: #a45bad;">200</span>.<span style="color: #a45bad;">0</span>;
+<pre  class="src src-processing"><span style="color: #8cc4ff; font-weight: bold;">float</span> <span style="color: #fcaf3e;">x</span> = <span style="color: #e9b2e3;">200</span>.<span style="color: #e9b2e3;">0</span>;
 
-<span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">setup</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
-  <span style="color: #4f97d7; font-weight: bold;">size</span><span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">400</span>, <span style="color: #a45bad;">400</span><span style="color: #bc6ec5;">)</span>;
+<span style="color: #8cc4ff; font-weight: bold;">void</span> <span style="color: #fce94f; font-weight: bold;">setup</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #b4fa70; font-weight: bold;">size</span><span style="color: #bc6ec5;">(</span><span style="color: #e9b2e3;">400</span>, <span style="color: #e9b2e3;">400</span><span style="color: #bc6ec5;">)</span>;
 <span style="color: #4f97d7;">}</span>
 
-<span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">draw</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
-  <span style="color: #4f97d7; font-weight: bold;">background</span><span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">0</span><span style="color: #bc6ec5;">)</span>;
-  <span style="color: #4f97d7; font-weight: bold;">ellipse</span><span style="color: #bc6ec5;">(</span>x, <span style="color: #a45bad;">200</span>, <span style="color: #a45bad;">50</span>, <span style="color: #a45bad;">50</span><span style="color: #bc6ec5;">)</span>;
+<span style="color: #8cc4ff; font-weight: bold;">void</span> <span style="color: #fce94f; font-weight: bold;">draw</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #b4fa70; font-weight: bold;">background</span><span style="color: #bc6ec5;">(</span><span style="color: #e9b2e3;">0</span><span style="color: #bc6ec5;">)</span>;
+  <span style="color: #b4fa70; font-weight: bold;">ellipse</span><span style="color: #bc6ec5;">(</span>x, <span style="color: #e9b2e3;">200</span>, <span style="color: #e9b2e3;">50</span>, <span style="color: #e9b2e3;">50</span><span style="color: #bc6ec5;">)</span>;
 <span style="color: #4f97d7;">}</span>
 </pre>
 </div>
@@ -378,8 +378,8 @@ eller usann (<code>false</code>)</li>
 </section>
 </section>
 <section>
-<section id="slide-org1e51487">
-<h2 id="org1e51487">Bevegelse</h2>
+<section id="slide-orgb2e0997">
+<h2 id="orgb2e0997">Bevegelse</h2>
 <ul>
 <li>Endring fra bilde til bilde</li>
 <li>Koden i <code>draw</code> kjører omtrent hvert 16. millisekund</li>
@@ -389,25 +389,25 @@ eller usann (<code>false</code>)</li>
 
 <div class="org-src-container">
 
-<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">float</span> <span style="color: #7590db;">x</span> = <span style="color: #a45bad;">200</span>;
-<span style="color: #ce537a; font-weight: bold;">float</span> <span style="color: #7590db;">y</span> = <span style="color: #a45bad;">200</span>;
+<pre  class="src src-processing"><span style="color: #8cc4ff; font-weight: bold;">float</span> <span style="color: #fcaf3e;">x</span> = <span style="color: #e9b2e3;">200</span>;
+<span style="color: #8cc4ff; font-weight: bold;">float</span> <span style="color: #fcaf3e;">y</span> = <span style="color: #e9b2e3;">200</span>;
 
-<span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">setup</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
-  <span style="color: #4f97d7; font-weight: bold;">size</span><span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">400</span>, <span style="color: #a45bad;">400</span><span style="color: #bc6ec5;">)</span>;
+<span style="color: #8cc4ff; font-weight: bold;">void</span> <span style="color: #fce94f; font-weight: bold;">setup</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #b4fa70; font-weight: bold;">size</span><span style="color: #bc6ec5;">(</span><span style="color: #e9b2e3;">400</span>, <span style="color: #e9b2e3;">400</span><span style="color: #bc6ec5;">)</span>;
 <span style="color: #4f97d7;">}</span>
 
-<span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">draw</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
-  <span style="color: #4f97d7; font-weight: bold;">background</span><span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">0</span><span style="color: #bc6ec5;">)</span>;
-  x = x + <span style="color: #a45bad;">2</span>.<span style="color: #a45bad;">5</span>;
-  y = y - <span style="color: #a45bad;">1</span>.<span style="color: #a45bad;">5</span>;
-  <span style="color: #4f97d7; font-weight: bold;">ellipse</span><span style="color: #bc6ec5;">(</span>x, y, <span style="color: #a45bad;">50</span>, <span style="color: #a45bad;">50</span><span style="color: #bc6ec5;">)</span>;
+<span style="color: #8cc4ff; font-weight: bold;">void</span> <span style="color: #fce94f; font-weight: bold;">draw</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #b4fa70; font-weight: bold;">background</span><span style="color: #bc6ec5;">(</span><span style="color: #e9b2e3;">0</span><span style="color: #bc6ec5;">)</span>;
+  x = x + <span style="color: #e9b2e3;">2</span>.<span style="color: #e9b2e3;">5</span>;
+  y = y - <span style="color: #e9b2e3;">1</span>.<span style="color: #e9b2e3;">5</span>;
+  <span style="color: #b4fa70; font-weight: bold;">ellipse</span><span style="color: #bc6ec5;">(</span>x, y, <span style="color: #e9b2e3;">50</span>, <span style="color: #e9b2e3;">50</span><span style="color: #bc6ec5;">)</span>;
 <span style="color: #4f97d7;">}</span>
 </pre>
 </div>
 
 </section>
-<section id="slide-org0a2c62f">
-<h3 id="org0a2c62f">Oppgaver</h3>
+<section id="slide-org60bafdc">
+<h3 id="org60bafdc">Oppgaver</h3>
 <ul>
 <li>Hva skjer hvis du fjerner <code>background(0);</code>?</li>
 <li>Kan du få sirkelen til å:
@@ -423,8 +423,8 @@ eller usann (<code>false</code>)</li>
 </section>
 </section>
 <section>
-<section id="slide-orgb271907">
-<h2 id="orgb271907">Reagere på tilstander</h2>
+<section id="slide-orgf2cc896">
+<h2 id="orgf2cc896">Reagere på tilstander</h2>
 <ul>
 <li>Ballen forsvinner ut av vinduet</li>
 <li>Vi må gjøre noe når den når kanten</li>
@@ -435,8 +435,8 @@ eller usann (<code>false</code>)</li>
 
 <div class="org-src-container">
 
-<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">float</span> <span style="color: #7590db;">xSpeed</span> = <span style="color: #a45bad;">2</span>.<span style="color: #a45bad;">5</span>;
-<span style="color: #ce537a; font-weight: bold;">float</span> <span style="color: #7590db;">ySpeed</span> = <span style="color: #a45bad;">1</span>.<span style="color: #a45bad;">5</span>;
+<pre  class="src src-processing"><span style="color: #8cc4ff; font-weight: bold;">float</span> <span style="color: #fcaf3e;">xSpeed</span> = <span style="color: #e9b2e3;">2</span>.<span style="color: #e9b2e3;">5</span>;
+<span style="color: #8cc4ff; font-weight: bold;">float</span> <span style="color: #fcaf3e;">ySpeed</span> = <span style="color: #e9b2e3;">1</span>.<span style="color: #e9b2e3;">5</span>;
 ...
   x = x + xSpeed;
   y = y + ySpeed;
@@ -445,8 +445,8 @@ eller usann (<code>false</code>)</li>
 </div>
 
 </section>
-<section id="slide-orgd2ebfb2">
-<h3 id="orgd2ebfb2">Hvis A, så B</h3>
+<section id="slide-org5010ea8">
+<h3 id="org5010ea8">Hvis A, så B</h3>
 <ul>
 <li>Lar oss gjøre B bare når A er sant:</li>
 
@@ -458,8 +458,8 @@ eller usann (<code>false</code>)</li>
 x = x + xSpeed;
 y = y + ySpeed;
 
-<span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #4f97d7;">(</span>x &gt; <span style="color: #4f97d7;">width</span> - <span style="color: #a45bad;">25</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
-  x = <span style="color: #4f97d7;">width</span> - <span style="color: #a45bad;">25</span>;
+<span style="color: #b4fa70; font-weight: bold;">if</span> <span style="color: #4f97d7;">(</span>x &gt; <span style="color: #e090d7;">width</span> - <span style="color: #e9b2e3;">25</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  x = <span style="color: #e090d7;">width</span> - <span style="color: #e9b2e3;">25</span>;
   xSpeed = -xSpeed;
 <span style="color: #4f97d7;">}</span>
 ...
@@ -467,16 +467,16 @@ y = y + ySpeed;
 </div>
 
 </section>
-<section id="slide-orgf686ed9">
-<h4 id="orgf686ed9">Oppgaver</h4>
+<section id="slide-orgc8db853">
+<h4 id="orgc8db853">Oppgaver</h4>
 <ul>
 <li>Kan du få ballen til å snu når den treffer bunnen også?</li>
 
 </ul>
 
 </section>
-<section id="slide-org2c16db4">
-<h3 id="org2c16db4">Hvis A, så B, ellers C</h3>
+<section id="slide-org8ca0698">
+<h3 id="org8ca0698">Hvis A, så B, ellers C</h3>
 <ul>
 <li>Lar oss gjøre B når A er sant, og C når det er usant:</li>
 
@@ -487,19 +487,19 @@ y = y + ySpeed;
 <pre  class="src src-processing">x = x + xSpeed;
 y = y + ySpeed;
 
-<span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #4f97d7;">(</span>x &gt; <span style="color: #4f97d7;">width</span> - <span style="color: #a45bad;">25</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
-  <span style="color: #4f97d7; font-weight: bold;">background</span><span style="color: #bc6ec5;">(</span>#ff0000<span style="color: #bc6ec5;">)</span>;
-  x = <span style="color: #4f97d7;">width</span> - <span style="color: #a45bad;">25</span>;
+<span style="color: #b4fa70; font-weight: bold;">if</span> <span style="color: #4f97d7;">(</span>x &gt; <span style="color: #e090d7;">width</span> - <span style="color: #e9b2e3;">25</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #b4fa70; font-weight: bold;">background</span><span style="color: #bc6ec5;">(</span>#ff0000<span style="color: #bc6ec5;">)</span>;
+  x = <span style="color: #e090d7;">width</span> - <span style="color: #e9b2e3;">25</span>;
   xSpeed = -xSpeed;
-<span style="color: #4f97d7;">}</span> <span style="color: #4f97d7; font-weight: bold;">else</span> <span style="color: #4f97d7;">{</span>
-  <span style="color: #4f97d7; font-weight: bold;">background</span><span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">0</span><span style="color: #bc6ec5;">)</span>;
+<span style="color: #4f97d7;">}</span> <span style="color: #b4fa70; font-weight: bold;">else</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #b4fa70; font-weight: bold;">background</span><span style="color: #bc6ec5;">(</span><span style="color: #e9b2e3;">0</span><span style="color: #bc6ec5;">)</span>;
 <span style="color: #4f97d7;">}</span>
 </pre>
 </div>
 
 </section>
-<section id="slide-org268b4d5">
-<h3 id="org268b4d5">Hvis A, så B, eller hvis &#x2026;</h3>
+<section id="slide-org01e4a92">
+<h3 id="org01e4a92">Hvis A, så B, eller hvis &#x2026;</h3>
 <ul>
 <li>Lar oss reagere på forskjellige tilstander,
 men bare på det første av uttrykkene som er sanne:</li>
@@ -508,19 +508,19 @@ men bare på det første av uttrykkene som er sanne:</li>
 
 <div class="org-src-container">
 
-<pre  class="src src-processing"><span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #4f97d7;">(</span>x &gt; <span style="color: #4f97d7;">width</span> - <span style="color: #a45bad;">25</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
-  x = <span style="color: #4f97d7;">width</span> - <span style="color: #a45bad;">25</span>;
+<pre  class="src src-processing"><span style="color: #b4fa70; font-weight: bold;">if</span> <span style="color: #4f97d7;">(</span>x &gt; <span style="color: #e090d7;">width</span> - <span style="color: #e9b2e3;">25</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  x = <span style="color: #e090d7;">width</span> - <span style="color: #e9b2e3;">25</span>;
   xSpeed = -xSpeed;
-<span style="color: #4f97d7;">}</span> <span style="color: #4f97d7; font-weight: bold;">else</span> <span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #4f97d7;">(</span>x &lt; <span style="color: #a45bad;">25</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
-  x = <span style="color: #a45bad;">25</span>;
+<span style="color: #4f97d7;">}</span> <span style="color: #b4fa70; font-weight: bold;">else</span> <span style="color: #b4fa70; font-weight: bold;">if</span> <span style="color: #4f97d7;">(</span>x &lt; <span style="color: #e9b2e3;">25</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  x = <span style="color: #e9b2e3;">25</span>;
   xSpeed = -xSpeed;
 <span style="color: #4f97d7;">}</span>
 </pre>
 </div>
 
 </section>
-<section id="slide-orgfafb56a">
-<h4 id="orgfafb56a">Oppgaver</h4>
+<section id="slide-org1ba5158">
+<h4 id="org1ba5158">Oppgaver</h4>
 <ul>
 <li>Få ballen til å sprette i bunnen og toppen også!</li>
 
@@ -529,8 +529,8 @@ men bare på det første av uttrykkene som er sanne:</li>
 </section>
 </section>
 <section>
-<section id="slide-org96cb514">
-<h2 id="org96cb514">Tastatur</h2>
+<section id="slide-org3ddeb56">
+<h2 id="org3ddeb56">Tastatur</h2>
 <ul>
 <li>Kan håndtere når:
 <ul>
@@ -542,25 +542,25 @@ men bare på det første av uttrykkene som er sanne:</li>
 </ul>
 
 </section>
-<section id="slide-org2594360">
-<h3 id="org2594360">Tast trykkes inn</h3>
+<section id="slide-orgc6eadb9">
+<h3 id="orgc6eadb9">Tast trykkes inn</h3>
 <div class="org-src-container">
 
-<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #4f97d7; font-weight: bold;">keyPressed</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
-  <span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #bc6ec5;">(</span><span style="color: #4f97d7;">key</span> == <span style="color: #2d9574;">'a'</span><span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
-    x = x - <span style="color: #a45bad;">2</span>.<span style="color: #a45bad;">5</span>;
+<pre  class="src src-processing"><span style="color: #8cc4ff; font-weight: bold;">void</span> <span style="color: #b4fa70; font-weight: bold;">keyPressed</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #b4fa70; font-weight: bold;">if</span> <span style="color: #bc6ec5;">(</span><span style="color: #e090d7;">key</span> == <span style="color: #e9b96e;">'a'</span><span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
+    x = x - <span style="color: #e9b2e3;">2</span>.<span style="color: #e9b2e3;">5</span>;
   <span style="color: #bc6ec5;">}</span>
 
-  <span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #bc6ec5;">(</span><span style="color: #4f97d7;">keyCode</span> == <span style="color: #a45bad;">LEFT</span><span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
-    x = x - <span style="color: #a45bad;">2</span>.<span style="color: #a45bad;">5</span>;
+  <span style="color: #b4fa70; font-weight: bold;">if</span> <span style="color: #bc6ec5;">(</span><span style="color: #e090d7;">keyCode</span> == <span style="color: #e9b2e3;">LEFT</span><span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
+    x = x - <span style="color: #e9b2e3;">2</span>.<span style="color: #e9b2e3;">5</span>;
   <span style="color: #bc6ec5;">}</span>
 <span style="color: #4f97d7;">}</span>
 </pre>
 </div>
 
 </section>
-<section id="slide-orgb09c8b4">
-<h3 id="orgb09c8b4">Tasterepetisjon</h3>
+<section id="slide-orgdbfbfcc">
+<h3 id="orgdbfbfcc">Tasterepetisjon</h3>
 <ul>
 <li>Koden over virker takket være tasterepetisjon</li>
 <li>Må vente lenge før det begynner</li>
@@ -574,18 +574,18 @@ men bare på det første av uttrykkene som er sanne:</li>
 
 <div class="org-src-container">
 
-<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">boolean</span> <span style="color: #7590db;">left</span>;
+<pre  class="src src-processing"><span style="color: #8cc4ff; font-weight: bold;">boolean</span> <span style="color: #fcaf3e;">left</span>;
 ...
-<span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #4f97d7; font-weight: bold;">keyPressed</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
-  <span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #bc6ec5;">(</span><span style="color: #4f97d7;">key</span> == <span style="color: #2d9574;">'a'</span><span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
-    left = <span style="color: #a45bad;">true</span>;
+<span style="color: #8cc4ff; font-weight: bold;">void</span> <span style="color: #b4fa70; font-weight: bold;">keyPressed</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #b4fa70; font-weight: bold;">if</span> <span style="color: #bc6ec5;">(</span><span style="color: #e090d7;">key</span> == <span style="color: #e9b96e;">'a'</span><span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
+    left = <span style="color: #e9b2e3;">true</span>;
   <span style="color: #bc6ec5;">}</span>
 ...
 <span style="color: #4f97d7;">}</span>
 
-<span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">draw</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
-  <span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #bc6ec5;">(</span>left<span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
-    x = x - <span style="color: #a45bad;">2</span>.<span style="color: #a45bad;">5</span>;
+<span style="color: #8cc4ff; font-weight: bold;">void</span> <span style="color: #fce94f; font-weight: bold;">draw</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #b4fa70; font-weight: bold;">if</span> <span style="color: #bc6ec5;">(</span>left<span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
+    x = x - <span style="color: #e9b2e3;">2</span>.<span style="color: #e9b2e3;">5</span>;
   <span style="color: #bc6ec5;">}</span>
 ...
 <span style="color: #4f97d7;">}</span>
@@ -593,8 +593,8 @@ men bare på det første av uttrykkene som er sanne:</li>
 </div>
 
 </section>
-<section id="slide-org41cd3ba">
-<h4 id="org41cd3ba">Oppgaver</h4>
+<section id="slide-org296ffa0">
+<h4 id="org296ffa0">Oppgaver</h4>
 <ul>
 <li>Legg til variabler for høyre, opp og ned</li>
 <li>Sett dem til sanne når passende taster trykkes inn</li>
@@ -604,8 +604,8 @@ men bare på det første av uttrykkene som er sanne:</li>
 </ul>
 
 </section>
-<section id="slide-org0565fdc">
-<h3 id="org0565fdc">Tast slippes opp</h3>
+<section id="slide-org708b021">
+<h3 id="org708b021">Tast slippes opp</h3>
 <ul>
 <li>Vi må også reagere på at tasten slippes</li>
 <li>Gjør som regel akkurat det motsatte av <code>keyPressed</code></li>
@@ -615,9 +615,9 @@ men bare på det første av uttrykkene som er sanne:</li>
 
 <div class="org-src-container">
 
-<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #4f97d7; font-weight: bold;">keyReleased</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
-  <span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #bc6ec5;">(</span><span style="color: #4f97d7;">key</span> ==<span style="color: #2d9574;">'a'</span><span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
-    left = <span style="color: #a45bad;">false</span>;
+<pre  class="src src-processing"><span style="color: #8cc4ff; font-weight: bold;">void</span> <span style="color: #b4fa70; font-weight: bold;">keyReleased</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #b4fa70; font-weight: bold;">if</span> <span style="color: #bc6ec5;">(</span><span style="color: #e090d7;">key</span> ==<span style="color: #e9b96e;">'a'</span><span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
+    left = <span style="color: #e9b2e3;">false</span>;
   <span style="color: #bc6ec5;">}</span>
 ...
 <span style="color: #4f97d7;">}</span>
@@ -625,8 +625,8 @@ men bare på det første av uttrykkene som er sanne:</li>
 </div>
 
 </section>
-<section id="slide-orgd535b00">
-<h4 id="orgd535b00">Oppgaver</h4>
+<section id="slide-org6f36158">
+<h4 id="org6f36158">Oppgaver</h4>
 <ul>
 <li>Skriv ferdig koden i <code>keyReleased</code> <br />
 sånn at du kan styre ballen med tastaturet.</li>
@@ -636,8 +636,8 @@ sånn at du kan styre ballen med tastaturet.</li>
 </section>
 </section>
 <section>
-<section id="slide-org08a3f59">
-<h2 id="org08a3f59">Mus</h2>
+<section id="slide-orgcaee414">
+<h2 id="orgcaee414">Mus</h2>
 <ul>
 <li>Musposisjon i egne variabler:
 <ul>
@@ -658,13 +658,13 @@ sånn at du kan styre ballen med tastaturet.</li>
 
 <div class="org-src-container">
 
-<pre  class="src src-processing"><span style="color: #4f97d7; font-weight: bold;">ellipse</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7;">mouseX</span>, <span style="color: #4f97d7;">mouseY</span>, <span style="color: #a45bad;">50</span>, <span style="color: #a45bad;">50</span><span style="color: #4f97d7;">)</span>;
+<pre  class="src src-processing"><span style="color: #b4fa70; font-weight: bold;">ellipse</span><span style="color: #4f97d7;">(</span><span style="color: #e090d7;">mouseX</span>, <span style="color: #e090d7;">mouseY</span>, <span style="color: #e9b2e3;">50</span>, <span style="color: #e9b2e3;">50</span><span style="color: #4f97d7;">)</span>;
 </pre>
 </div>
 
 </section>
-<section id="slide-orgc3ada9d">
-<h3 id="orgc3ada9d">Oppgaver</h3>
+<section id="slide-org11bc86b">
+<h3 id="org11bc86b">Oppgaver</h3>
 <ul>
 <li>Endre fargen på sirkelen når museknappen er trykket inn.
 Husk at fargen skal gå tilbake til hvit når museknappen er sluppet opp. <br />
@@ -675,8 +675,8 @@ Hint: <code>fill(farge)</code> setter fargen på det du skal tegne.</li>
 </section>
 </section>
 <section>
-<section id="slide-orgffb471a">
-<h2 id="orgffb471a">Sammensatte datatyper</h2>
+<section id="slide-org0d2ba29">
+<h2 id="org0d2ba29">Sammensatte datatyper</h2>
 <ul>
 <li>Typer som ikke har en spesiell plass</li>
 <li>Typisk bygget opp av flere variabler</li>
@@ -689,8 +689,8 @@ PShape, PImage, osv.</li>
 </ul>
 
 </section>
-<section id="slide-orgcef84f6">
-<h3 id="orgcef84f6">Bilder</h3>
+<section id="slide-org8866252">
+<h3 id="org8866252">Bilder</h3>
 <ul>
 <li>Lag en mappe som heter data i prosjektmappen</li>
 <li>Lagre bildefilen her</li>
@@ -701,23 +701,23 @@ PShape, PImage, osv.</li>
 
 <div class="org-src-container">
 
-<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">PImage</span> <span style="color: #7590db;">bilde</span>;
+<pre  class="src src-processing"><span style="color: #8cc4ff; font-weight: bold;">PImage</span> <span style="color: #fcaf3e;">bilde</span>;
 
-<span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">setup</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
-  <span style="color: #4f97d7; font-weight: bold;">size</span><span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">400</span>, <span style="color: #a45bad;">400</span><span style="color: #bc6ec5;">)</span>;
-  bilde = <span style="color: #4f97d7; font-weight: bold;">loadImage</span><span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">"bilde.png"</span><span style="color: #bc6ec5;">)</span>;
+<span style="color: #8cc4ff; font-weight: bold;">void</span> <span style="color: #fce94f; font-weight: bold;">setup</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #b4fa70; font-weight: bold;">size</span><span style="color: #bc6ec5;">(</span><span style="color: #e9b2e3;">400</span>, <span style="color: #e9b2e3;">400</span><span style="color: #bc6ec5;">)</span>;
+  bilde = <span style="color: #b4fa70; font-weight: bold;">loadImage</span><span style="color: #bc6ec5;">(</span><span style="color: #e9b96e;">"bilde.png"</span><span style="color: #bc6ec5;">)</span>;
 <span style="color: #4f97d7;">}</span>
 
-<span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">draw</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
-  <span style="color: #4f97d7; font-weight: bold;">background</span><span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">0</span><span style="color: #bc6ec5;">)</span>;
-  <span style="color: #4f97d7; font-weight: bold;">image</span><span style="color: #bc6ec5;">(</span>bilde, <span style="color: #a45bad;">200</span>, <span style="color: #a45bad;">200</span><span style="color: #bc6ec5;">)</span>;
+<span style="color: #8cc4ff; font-weight: bold;">void</span> <span style="color: #fce94f; font-weight: bold;">draw</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #b4fa70; font-weight: bold;">background</span><span style="color: #bc6ec5;">(</span><span style="color: #e9b2e3;">0</span><span style="color: #bc6ec5;">)</span>;
+  <span style="color: #b4fa70; font-weight: bold;">image</span><span style="color: #bc6ec5;">(</span>bilde, <span style="color: #e9b2e3;">200</span>, <span style="color: #e9b2e3;">200</span><span style="color: #bc6ec5;">)</span>;
 <span style="color: #4f97d7;">}</span>
 </pre>
 </div>
 
 </section>
-<section id="slide-org2d7ee2c">
-<h4 id="org2d7ee2c">Oppgaver</h4>
+<section id="slide-org9ba872b">
+<h4 id="org9ba872b">Oppgaver</h4>
 <ul>
 <li>Hva skjer om du fjerner innlastingen?</li>
 <li>Midtstill bildet:
@@ -730,8 +730,8 @@ PShape, PImage, osv.</li>
 </ul>
 
 </section>
-<section id="slide-org53fa953">
-<h3 id="org53fa953">Egendefinerte typer</h3>
+<section id="slide-org4c686e1">
+<h3 id="org4c686e1">Egendefinerte typer</h3>
 <ul>
 <li>Sammensatte typer lages av klasser</li>
 <li>Når vi lager noe av denne typen kalles de objekter</li>
@@ -743,15 +743,15 @@ PShape, PImage, osv.</li>
 
 <div class="org-src-container">
 
-<pre  class="src src-processing"><span style="color: #4f97d7; font-weight: bold;">class</span> <span style="color: #ce537a; font-weight: bold;">TypeNavn</span> <span style="color: #4f97d7;">{</span>
+<pre  class="src src-processing"><span style="color: #b4fa70; font-weight: bold;">class</span> <span style="color: #8cc4ff; font-weight: bold;">TypeNavn</span> <span style="color: #4f97d7;">{</span>
 ...
 <span style="color: #4f97d7;">}</span>
 </pre>
 </div>
 
 </section>
-<section id="slide-orgc9fea52">
-<h4 id="orgc9fea52">Variabler</h4>
+<section id="slide-orgc762aa9">
+<h4 id="orgc762aa9">Variabler</h4>
 <ul>
 <li>Ser ut som vanlig</li>
 <li>Plasseres mellom krøllparentesene</li>
@@ -760,16 +760,16 @@ PShape, PImage, osv.</li>
 
 <div class="org-src-container">
 
-<pre  class="src src-processing"><span style="color: #4f97d7; font-weight: bold;">class</span> <span style="color: #ce537a; font-weight: bold;">Ball</span> <span style="color: #4f97d7;">{</span>
-  <span style="color: #ce537a; font-weight: bold;">float</span> <span style="color: #7590db;">x</span>;
-  <span style="color: #ce537a; font-weight: bold;">float</span> <span style="color: #7590db;">y</span>;
+<pre  class="src src-processing"><span style="color: #b4fa70; font-weight: bold;">class</span> <span style="color: #8cc4ff; font-weight: bold;">Ball</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #8cc4ff; font-weight: bold;">float</span> <span style="color: #fcaf3e;">x</span>;
+  <span style="color: #8cc4ff; font-weight: bold;">float</span> <span style="color: #fcaf3e;">y</span>;
 <span style="color: #4f97d7;">}</span>
 </pre>
 </div>
 
 </section>
-<section id="slide-orgab95f68">
-<h4 id="orgab95f68">Konstruktør</h4>
+<section id="slide-org06c6583">
+<h4 id="org06c6583">Konstruktør</h4>
 <ul>
 <li>Brukes til å opprette objekter av klassen</li>
 <li>Har samme navn som klassen</li>
@@ -778,21 +778,21 @@ PShape, PImage, osv.</li>
 
 <div class="org-src-container">
 
-<pre  class="src src-processing"><span style="color: #4f97d7; font-weight: bold;">class</span> <span style="color: #ce537a; font-weight: bold;">Ball</span> <span style="color: #4f97d7;">{</span>
-  <span style="color: #ce537a; font-weight: bold;">float</span> <span style="color: #7590db;">x</span>;
-  <span style="color: #ce537a; font-weight: bold;">float</span> <span style="color: #7590db;">y</span>;
+<pre  class="src src-processing"><span style="color: #b4fa70; font-weight: bold;">class</span> <span style="color: #8cc4ff; font-weight: bold;">Ball</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #8cc4ff; font-weight: bold;">float</span> <span style="color: #fcaf3e;">x</span>;
+  <span style="color: #8cc4ff; font-weight: bold;">float</span> <span style="color: #fcaf3e;">y</span>;
 
-  <span style="color: #bc6ec5; font-weight: bold;">Ball</span><span style="color: #bc6ec5;">(</span><span style="color: #ce537a; font-weight: bold;">float</span> <span style="color: #7590db;">x</span>, <span style="color: #ce537a; font-weight: bold;">float</span> <span style="color: #7590db;">y</span><span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
-    <span style="color: #4f97d7; font-weight: bold;">this</span>.x = x;
-    <span style="color: #4f97d7; font-weight: bold;">this</span>.y = y;
+  <span style="color: #fce94f; font-weight: bold;">Ball</span><span style="color: #bc6ec5;">(</span><span style="color: #8cc4ff; font-weight: bold;">float</span> <span style="color: #fcaf3e;">x</span>, <span style="color: #8cc4ff; font-weight: bold;">float</span> <span style="color: #fcaf3e;">y</span><span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
+    <span style="color: #b4fa70; font-weight: bold;">this</span>.x = x;
+    <span style="color: #b4fa70; font-weight: bold;">this</span>.y = y;
   <span style="color: #bc6ec5;">}</span>
 <span style="color: #4f97d7;">}</span>
 </pre>
 </div>
 
 </section>
-<section id="slide-orge282ca5">
-<h4 id="orge282ca5">Oppførsel</h4>
+<section id="slide-orgee0dcf3">
+<h4 id="orgee0dcf3">Oppførsel</h4>
 <ul>
 <li>Kan lage metoder
 <ul>
@@ -805,42 +805,44 @@ PShape, PImage, osv.</li>
 
 <div class="org-src-container">
 
-<pre  class="src src-processing"><span style="color: #4f97d7; font-weight: bold;">class</span> <span style="color: #ce537a; font-weight: bold;">Ball</span> <span style="color: #4f97d7;">{</span>
+<pre  class="src src-processing"><span style="color: #b4fa70; font-weight: bold;">class</span> <span style="color: #8cc4ff; font-weight: bold;">Ball</span> <span style="color: #4f97d7;">{</span>
 ...
-  <span style="color: #ce537a; font-weight: bold;">void</span> draw<span style="color: #bc6ec5;">()</span> <span style="color: #bc6ec5;">{</span>
-    <span style="color: #4f97d7; font-weight: bold;">ellipse</span><span style="color: #2d9574;">(</span>x, y, <span style="color: #a45bad;">50</span>, <span style="color: #a45bad;">50</span><span style="color: #2d9574;">)</span>;
+  <span style="color: #8cc4ff; font-weight: bold;">void</span> draw<span style="color: #bc6ec5;">()</span> <span style="color: #bc6ec5;">{</span>
+    <span style="color: #b4fa70; font-weight: bold;">ellipse</span><span style="color: #2d9574;">(</span>x, y, <span style="color: #e9b2e3;">50</span>, <span style="color: #e9b2e3;">50</span><span style="color: #2d9574;">)</span>;
   <span style="color: #bc6ec5;">}</span>
 <span style="color: #4f97d7;">}</span>
 </pre>
 </div>
 
 </section>
-<section id="slide-orgd0365f7">
-<h4 id="orgd0365f7">Bruke objekter</h4>
+<section id="slide-orgbc05a0e">
+<h4 id="orgbc05a0e">Bruke objekter</h4>
 <div class="org-src-container">
 
-<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">Ball</span> <span style="color: #7590db;">ball</span> = <span style="color: #4f97d7; font-weight: bold;">new</span> <span style="color: #ce537a; font-weight: bold;">Ball</span><span style="color: #4f97d7;">(</span><span style="color: #a45bad;">200</span>, <span style="color: #a45bad;">200</span><span style="color: #4f97d7;">)</span>;
+<pre  class="src src-processing"><span style="color: #8cc4ff; font-weight: bold;">Ball</span> <span style="color: #fcaf3e;">ball</span> = <span style="color: #b4fa70; font-weight: bold;">new</span> <span style="color: #8cc4ff; font-weight: bold;">Ball</span><span style="color: #4f97d7;">(</span><span style="color: #e9b2e3;">200</span>, <span style="color: #e9b2e3;">200</span><span style="color: #4f97d7;">)</span>;
 ...
-<span style="color: #ce537a; font-weight: bold;">void</span> draw<span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
-  <span style="color: #4f97d7; font-weight: bold;">background</span><span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">0</span><span style="color: #bc6ec5;">)</span>;
+<span style="color: #8cc4ff; font-weight: bold;">void</span> draw<span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #b4fa70; font-weight: bold;">background</span><span style="color: #bc6ec5;">(</span><span style="color: #e9b2e3;">0</span><span style="color: #bc6ec5;">)</span>;
   ball.draw<span style="color: #bc6ec5;">()</span>;
 <span style="color: #4f97d7;">}</span>
 </pre>
 </div>
 
 </section>
-<section id="slide-org8d7e892">
-<h4 id="org8d7e892">Oppgaver</h4>
+<section id="slide-org5d77d8a">
+<h4 id="org5d77d8a">Oppgaver</h4>
 <ul>
-<li>Legg til hastighet i ballen og spretting i kantene</li>
+<li>Legg til hastighetsvariabler i ballene</li>
+<li>Få ballen til å bevege seg</li>
+<li>Få ballen til å sprette i kantene</li>
 
 </ul>
 
 </section>
 </section>
 <section>
-<section id="slide-org66b9294">
-<h2 id="org66b9294">Lister</h2>
+<section id="slide-org31d95cc">
+<h2 id="org31d95cc">Lister</h2>
 <ul>
 <li>Den enkleste varianten er en spesiell type
 <ul>
@@ -858,8 +860,8 @@ PShape, PImage, osv.</li>
 </ul>
 
 </section>
-<section id="slide-org4468186">
-<h3 id="org4468186">Opprette</h3>
+<section id="slide-orgd0c2204">
+<h3 id="orgd0c2204">Opprette</h3>
 <ul>
 <li>Må angi antall elementer i listen</li>
 <li>Alle verdiene er satt til det som tilsvarer <code>0</code> <br />
@@ -869,14 +871,14 @@ Dette fører ofte til feil i programmer</li>
 
 <div class="org-src-container">
 
-<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">float</span><span style="color: #4f97d7;">[]</span> <span style="color: #7590db;">floatList</span> = <span style="color: #4f97d7; font-weight: bold;">new</span> <span style="color: #ce537a; font-weight: bold;">float</span><span style="color: #4f97d7;">[</span><span style="color: #a45bad;">100</span><span style="color: #4f97d7;">]</span>;
-<span style="color: #ce537a; font-weight: bold;">Ball</span><span style="color: #4f97d7;">[]</span> <span style="color: #7590db;">balls</span> = <span style="color: #4f97d7; font-weight: bold;">new</span> <span style="color: #ce537a; font-weight: bold;">Ball</span><span style="color: #4f97d7;">[</span><span style="color: #a45bad;">10</span><span style="color: #4f97d7;">]</span>;
+<pre  class="src src-processing"><span style="color: #8cc4ff; font-weight: bold;">float</span><span style="color: #4f97d7;">[]</span> <span style="color: #fcaf3e;">floatList</span> = <span style="color: #b4fa70; font-weight: bold;">new</span> <span style="color: #8cc4ff; font-weight: bold;">float</span><span style="color: #4f97d7;">[</span><span style="color: #e9b2e3;">100</span><span style="color: #4f97d7;">]</span>;
+<span style="color: #8cc4ff; font-weight: bold;">Ball</span><span style="color: #4f97d7;">[]</span> <span style="color: #fcaf3e;">balls</span> = <span style="color: #b4fa70; font-weight: bold;">new</span> <span style="color: #8cc4ff; font-weight: bold;">Ball</span><span style="color: #4f97d7;">[</span><span style="color: #e9b2e3;">10</span><span style="color: #4f97d7;">]</span>;
 </pre>
 </div>
 
 </section>
-<section id="slide-orgf8f1dd3">
-<h3 id="orgf8f1dd3">Sette verdier</h3>
+<section id="slide-orgbcf07b5">
+<h3 id="orgbcf07b5">Sette verdier</h3>
 <ul>
 <li>Får tilgang til elementer med klammer og nummer i listen</li>
 <li>Nummer i listen begynner på <code>0</code> og slutter på <code>antall - 1</code></li>
@@ -888,15 +890,15 @@ som gir oss hvor mange plasser som finnes</li>
 
 <div class="org-src-container">
 
-<pre  class="src src-processing">floatList<span style="color: #4f97d7;">[</span><span style="color: #a45bad;">0</span><span style="color: #4f97d7;">]</span> = <span style="color: #a45bad;">3</span>.<span style="color: #a45bad;">14</span>;
-balls<span style="color: #4f97d7;">[</span><span style="color: #a45bad;">9</span><span style="color: #4f97d7;">]</span> = <span style="color: #4f97d7; font-weight: bold;">new</span> <span style="color: #ce537a; font-weight: bold;">Ball</span><span style="color: #4f97d7;">()</span>;
-floatList<span style="color: #4f97d7;">[</span>floatList.length - <span style="color: #a45bad;">1</span><span style="color: #4f97d7;">]</span> = <span style="color: #a45bad;">99</span>.<span style="color: #a45bad;">9</span>;
+<pre  class="src src-processing">floatList<span style="color: #4f97d7;">[</span><span style="color: #e9b2e3;">0</span><span style="color: #4f97d7;">]</span> = <span style="color: #e9b2e3;">3</span>.<span style="color: #e9b2e3;">14</span>;
+balls<span style="color: #4f97d7;">[</span><span style="color: #e9b2e3;">9</span><span style="color: #4f97d7;">]</span> = <span style="color: #b4fa70; font-weight: bold;">new</span> <span style="color: #8cc4ff; font-weight: bold;">Ball</span><span style="color: #4f97d7;">()</span>;
+floatList<span style="color: #4f97d7;">[</span>floatList.length - <span style="color: #e9b2e3;">1</span><span style="color: #4f97d7;">]</span> = <span style="color: #e9b2e3;">99</span>.<span style="color: #e9b2e3;">9</span>;
 </pre>
 </div>
 
 </section>
-<section id="slide-org89a2d80">
-<h3 id="org89a2d80">Løpe gjennom og bruke</h3>
+<section id="slide-org33dc79a">
+<h3 id="org33dc79a">Løpe gjennom og bruke</h3>
 <ul>
 <li>Kan bruke en veldig enkel løkke hvis
 <ul>
@@ -910,8 +912,8 @@ floatList<span style="color: #4f97d7;">[</span>floatList.length - <span style="c
 </ul>
 
 </section>
-<section id="slide-org2bce05b">
-<h4 id="org2bce05b">For-each-løkke</h4>
+<section id="slide-org13c2936">
+<h4 id="org13c2936">For-each-løkke</h4>
 <ul>
 <li>Skrives <code>for (Type navn : liste)</code></li>
 <li>Leses for hver Type, navn, i liste</li>
@@ -922,15 +924,15 @@ for hver Ball, ball, i balls, draw ball</li>
 
 <div class="org-src-container">
 
-<pre  class="src src-processing"><span style="color: #4f97d7; font-weight: bold;">for</span> <span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">Ball</span> <span style="color: #7590db;">ball</span> : balls<span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+<pre  class="src src-processing"><span style="color: #b4fa70; font-weight: bold;">for</span> <span style="color: #4f97d7;">(</span><span style="color: #8cc4ff; font-weight: bold;">Ball</span> <span style="color: #fcaf3e;">ball</span> : balls<span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
   ball.draw<span style="color: #bc6ec5;">()</span>;
 <span style="color: #4f97d7;">}</span>
 </pre>
 </div>
 
 </section>
-<section id="slide-orgb6a81f4">
-<h4 id="orgb6a81f4">For-løkke</h4>
+<section id="slide-orgf72a8a6">
+<h4 id="orgf72a8a6">For-løkke</h4>
 <ul>
 <li>Skrives <code>for (oppsett; test; oppdatering)</code></li>
 <li>Leses ikke like enkelt som en for-each</li>
@@ -940,15 +942,15 @@ for hver Ball, ball, i balls, draw ball</li>
 
 <div class="org-src-container">
 
-<pre  class="src src-processing"><span style="color: #4f97d7; font-weight: bold;">for</span> <span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">i</span> = <span style="color: #a45bad;">0</span>; i &lt; floatList.<span style="color: #ce537a; font-weight: bold;">length</span>; i++<span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
-  floatList<span style="color: #bc6ec5;">[</span>i<span style="color: #bc6ec5;">]</span> += <span style="color: #a45bad;">0</span>.<span style="color: #a45bad;">1</span>;
+<pre  class="src src-processing"><span style="color: #b4fa70; font-weight: bold;">for</span> <span style="color: #4f97d7;">(</span><span style="color: #8cc4ff; font-weight: bold;">int</span> <span style="color: #fcaf3e;">i</span> = <span style="color: #e9b2e3;">0</span>; i &lt; floatList.<span style="color: #8cc4ff; font-weight: bold;">length</span>; i++<span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  floatList<span style="color: #bc6ec5;">[</span>i<span style="color: #bc6ec5;">]</span> += <span style="color: #e9b2e3;">0</span>.<span style="color: #e9b2e3;">1</span>;
 <span style="color: #4f97d7;">}</span>
 </pre>
 </div>
 
 </section>
-<section id="slide-orgcf8b4ef">
-<h3 id="orgcf8b4ef">Oppgaver</h3>
+<section id="slide-orgcaecc0c">
+<h3 id="orgcaecc0c">Oppgaver</h3>
 <ul>
 <li>Lag en liste med baller og få dem til å sprette rundt i vinduet</li>
 <li>Ekstra utfordring, bruk <a href="https://processing.org/reference/dist_.html">dist(x1, y1, x2, y2)</a> og få ballene til å sprette i hverandre</li>
@@ -958,8 +960,8 @@ for hver Ball, ball, i balls, draw ball</li>
 </section>
 </section>
 <section>
-<section id="slide-org40ab649">
-<h2 id="org40ab649">Avanserte lister</h2>
+<section id="slide-orgac8d7fd">
+<h2 id="orgac8d7fd">Avanserte lister</h2>
 <ul>
 <li>Lar oss legge til og fjerne innholdet enkelt</li>
 <li>Kan fjerne basert på posisjon eller objekt</li>
@@ -970,22 +972,22 @@ for hver Ball, ball, i balls, draw ball</li>
 
 <div class="org-src-container">
 
-<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">ArrayList</span><span style="color: #4f97d7;">&lt;</span><span style="color: #ce537a; font-weight: bold;">Ball</span><span style="color: #4f97d7;">&gt;</span> <span style="color: #7590db;">balls</span> = <span style="color: #4f97d7; font-weight: bold;">new</span> <span style="color: #ce537a; font-weight: bold;">ArrayList</span><span style="color: #4f97d7;">&lt;</span><span style="color: #ce537a; font-weight: bold;">Ball</span><span style="color: #4f97d7;">&gt;()</span>;
-<span style="color: #ce537a; font-weight: bold;">Ball</span> <span style="color: #7590db;">ball1</span> = <span style="color: #4f97d7; font-weight: bold;">new</span> <span style="color: #ce537a; font-weight: bold;">Ball</span><span style="color: #4f97d7;">(</span><span style="color: #a45bad;">200</span>, <span style="color: #a45bad;">200</span><span style="color: #4f97d7;">)</span>;
-<span style="color: #ce537a; font-weight: bold;">Ball</span> <span style="color: #7590db;">ball2</span> = <span style="color: #4f97d7; font-weight: bold;">new</span> <span style="color: #ce537a; font-weight: bold;">Ball</span><span style="color: #4f97d7;">(</span><span style="color: #a45bad;">300</span>, <span style="color: #a45bad;">300</span><span style="color: #4f97d7;">)</span>;
+<pre  class="src src-processing"><span style="color: #8cc4ff; font-weight: bold;">ArrayList</span><span style="color: #4f97d7;">&lt;</span><span style="color: #8cc4ff; font-weight: bold;">Ball</span><span style="color: #4f97d7;">&gt;</span> <span style="color: #fcaf3e;">balls</span> = <span style="color: #b4fa70; font-weight: bold;">new</span> <span style="color: #8cc4ff; font-weight: bold;">ArrayList</span><span style="color: #4f97d7;">&lt;</span><span style="color: #8cc4ff; font-weight: bold;">Ball</span><span style="color: #4f97d7;">&gt;()</span>;
+<span style="color: #8cc4ff; font-weight: bold;">Ball</span> <span style="color: #fcaf3e;">ball1</span> = <span style="color: #b4fa70; font-weight: bold;">new</span> <span style="color: #8cc4ff; font-weight: bold;">Ball</span><span style="color: #4f97d7;">(</span><span style="color: #e9b2e3;">200</span>, <span style="color: #e9b2e3;">200</span><span style="color: #4f97d7;">)</span>;
+<span style="color: #8cc4ff; font-weight: bold;">Ball</span> <span style="color: #fcaf3e;">ball2</span> = <span style="color: #b4fa70; font-weight: bold;">new</span> <span style="color: #8cc4ff; font-weight: bold;">Ball</span><span style="color: #4f97d7;">(</span><span style="color: #e9b2e3;">300</span>, <span style="color: #e9b2e3;">300</span><span style="color: #4f97d7;">)</span>;
 balls.add<span style="color: #4f97d7;">(</span>ball1<span style="color: #4f97d7;">)</span>;
 balls.add<span style="color: #4f97d7;">(</span>ball2<span style="color: #4f97d7;">)</span>;
 
-balls.<span style="color: #4f97d7; font-weight: bold;">get</span><span style="color: #4f97d7;">(</span><span style="color: #a45bad;">1</span><span style="color: #4f97d7;">)</span>.draw<span style="color: #4f97d7;">()</span>;
+balls.<span style="color: #b4fa70; font-weight: bold;">get</span><span style="color: #4f97d7;">(</span><span style="color: #e9b2e3;">1</span><span style="color: #4f97d7;">)</span>.draw<span style="color: #4f97d7;">()</span>;
 
 balls.remove<span style="color: #4f97d7;">(</span>ball1<span style="color: #4f97d7;">)</span>;
-balls.remove<span style="color: #4f97d7;">(</span><span style="color: #a45bad;">0</span><span style="color: #4f97d7;">)</span>;
+balls.remove<span style="color: #4f97d7;">(</span><span style="color: #e9b2e3;">0</span><span style="color: #4f97d7;">)</span>;
 </pre>
 </div>
 
 </section>
-<section id="slide-orgb6159d0">
-<h3 id="orgb6159d0">Oppgaver</h3>
+<section id="slide-orgeec8547">
+<h3 id="orgeec8547">Oppgaver</h3>
 <ul>
 <li>Bytt ut den gamle listen med den avanserte varianten</li>
 
@@ -994,8 +996,8 @@ balls.remove<span style="color: #4f97d7;">(</span><span style="color: #a45bad;">
 </section>
 </section>
 <section>
-<section id="slide-org8f4c0d7">
-<h2 id="org8f4c0d7">Spill - Ball Buster</h2>
+<section id="slide-orgb96857a">
+<h2 id="orgb96857a">Spill - Ball Buster</h2>
 <ul>
 <li>Baller spretter rundt på skjermen</li>
 <li>Klikk på dem for å ødelegge dem</li>
@@ -1005,49 +1007,141 @@ balls.remove<span style="color: #4f97d7;">(</span><span style="color: #a45bad;">
 </ul>
 
 </section>
-<section id="slide-orga3c4362">
-<h3 id="orga3c4362">Ødelegge ballene</h3>
+<section id="slide-org17c9e35">
+<h3 id="org17c9e35">Nedtelling</h3>
+<div class="outline-text-3" id="text-org17c9e35">
+</div>
+</section>
+<section id="slide-orgd1d6c00">
+<h4 id="orgd1d6c00">Variabel for nedtellingen</h4>
 <ul>
-<li>Lag en <code>mouseClicked</code></li>
+<li>Variabel for når tiden går ut</li>
+<li>Vi lager en hjelpemetode for å sette utløpstiden</li>
+<li>Vi bruker millisekunder (tusendels sekunder)</li>
+
+</ul>
+
+<div class="org-src-container">
+
+<pre  class="src src-processing"><span style="color: #8cc4ff; font-weight: bold;">int</span> <span style="color: #fcaf3e;">timeOut</span>;
+
+<span style="color: #8cc4ff; font-weight: bold;">void</span> <span style="color: #fce94f; font-weight: bold;">setTimeOut</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  timeOut = <span style="color: #b4fa70; font-weight: bold;">millis</span><span style="color: #bc6ec5;">()</span> + <span style="color: #e9b2e3;">30000</span>;
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+
+</section>
+<section id="slide-org50f768e">
+<h4 id="org50f768e">Vise nedtellingen</h4>
+<div class="org-src-container">
+
+<pre  class="src src-processing"><span style="color: #8cc4ff; font-weight: bold;">void</span> <span style="color: #fce94f; font-weight: bold;">draw</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #b4fa70; font-weight: bold;">background</span><span style="color: #bc6ec5;">(</span><span style="color: #e9b2e3;">0</span><span style="color: #bc6ec5;">)</span>;
+  <span style="color: #b4fa70; font-weight: bold;">textAlign</span><span style="color: #bc6ec5;">(</span><span style="color: #e9b2e3;">CENTER</span><span style="color: #bc6ec5;">)</span>;
+  <span style="color: #8cc4ff; font-weight: bold;">int</span> <span style="color: #fcaf3e;">timeLeft</span> = timeOut - <span style="color: #b4fa70; font-weight: bold;">millis</span><span style="color: #bc6ec5;">()</span>;
+  <span style="color: #8cc4ff; font-weight: bold;">int</span> <span style="color: #fcaf3e;">seconds</span> = timeLeft / <span style="color: #e9b2e3;">1000</span>;
+  <span style="color: #b4fa70; font-weight: bold;">text</span><span style="color: #bc6ec5;">(</span>seconds, <span style="color: #e090d7;">width</span> / <span style="color: #e9b2e3;">2</span>, <span style="color: #e9b2e3;">20</span><span style="color: #bc6ec5;">)</span>;
+  ...
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+
+</section>
+<section id="slide-orgd0a48f1">
+<h4 id="orgd0a48f1">Tiden løper ut</h4>
+<ul>
+<li>Når <code>millis()</code> blir lik timeOut, er spillet slutt</li>
+
+</ul>
+
+<div class="org-src-container">
+
+<pre  class="src src-processing"><span style="color: #8cc4ff; font-weight: bold;">void</span> <span style="color: #fce94f; font-weight: bold;">draw</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #b4fa70; font-weight: bold;">background</span><span style="color: #bc6ec5;">(</span><span style="color: #e9b2e3;">0</span><span style="color: #bc6ec5;">)</span>;
+  <span style="color: #b4fa70; font-weight: bold;">textAlign</span><span style="color: #bc6ec5;">(</span><span style="color: #e9b2e3;">CENTER</span><span style="color: #bc6ec5;">)</span>;
+  <span style="color: #8cc4ff; font-weight: bold;">int</span> <span style="color: #fcaf3e;">timeLeft</span> = timeOut - <span style="color: #b4fa70; font-weight: bold;">millis</span><span style="color: #bc6ec5;">()</span>;
+
+  <span style="color: #b4fa70; font-weight: bold;">if</span> <span style="color: #bc6ec5;">(</span>timeLeft &lt;= <span style="color: #e9b2e3;">0</span><span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
+    <span style="color: #b4fa70; font-weight: bold;">text</span><span style="color: #2d9574;">(</span><span style="color: #e9b96e;">"GAME OVER"</span>, <span style="color: #e090d7;">width</span> / <span style="color: #e9b2e3;">2</span>, <span style="color: #e090d7;">height</span> / <span style="color: #e9b2e3;">2</span><span style="color: #2d9574;">)</span>;
+    <span style="color: #b4fa70; font-weight: bold;">return</span>;
+  <span style="color: #bc6ec5;">}</span>
+  ...
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+
+</section>
+<section id="slide-org411f646">
+<h3 id="org411f646">Ødelegge ballene</h3>
+<ul>
+<li>Lag en <code>mouseClicked</code> metode</li>
 <li>Løp gjennom ballene</li>
 <li>Se om avstand fra muspeker til ballen er mindre enn radien</li>
 <li>I så fall, fjern ballen fra listen</li>
 
 </ul>
 
-</section>
-<section id="slide-org1dfdf18">
-<h3 id="org1dfdf18">Nedtelling</h3>
-<ul>
-<li>Variabel for når tiden går ut: <code>int timeOut = millis() + 30000;</code>
-<ul>
-<li>Husk å bare sette denne når et brett begynner</li>
+<div class="org-src-container">
 
-</ul></li>
-<li>Sjekke om tiden har gått ut <code>if (millis() &gt;= timeOut) ...</code></li>
-<li>Vise nedtellingen:</li>
+<pre  class="src src-processing"><span style="color: #8cc4ff; font-weight: bold;">void</span> <span style="color: #b4fa70; font-weight: bold;">mouseClicked</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #b4fa70; font-weight: bold;">for</span> <span style="color: #bc6ec5;">(</span><span style="color: #8cc4ff; font-weight: bold;">Ball</span> <span style="color: #fcaf3e;">ball</span> : balls<span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
+    <span style="color: #b4fa70; font-weight: bold;">if</span> <span style="color: #2d9574;">(</span><span style="color: #b4fa70; font-weight: bold;">dist</span><span style="color: #67b11d;">(</span>ball.x, ball.y, <span style="color: #e090d7;">mouseX</span>, <span style="color: #e090d7;">mouseY</span><span style="color: #67b11d;">)</span> &lt; <span style="color: #e9b2e3;">25</span><span style="color: #2d9574;">)</span> <span style="color: #2d9574;">{</span>
+      balls.remove<span style="color: #67b11d;">(</span>ball<span style="color: #67b11d;">)</span>;
+      <span style="color: #b4fa70; font-weight: bold;">return</span>;
+    <span style="color: #2d9574;">}</span>
+  <span style="color: #bc6ec5;">}</span>
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+
+</section>
+<section id="slide-org3eb5b0b">
+<h4 id="org3eb5b0b">Neste brett</h4>
+<ul>
+<li>Variabel for hvilket brett vi er på</li>
+<li>Bytte brett når alle ballene er ødelagt</li>
+<li>Se <a href="https://processing.org/reference/random_.html">random()</a> for forklaring på de tilfeldige tallene</li>
 
 </ul>
 
 <div class="org-src-container">
 
-<pre  class="src src-processing"><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">timeLeft</span> = timeOut - <span style="color: #4f97d7; font-weight: bold;">millis</span><span style="color: #4f97d7;">()</span>;
-<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">seconds</span> = timeLeft / <span style="color: #a45bad;">1000</span>;
-<span style="color: #4f97d7; font-weight: bold;">textAlign</span><span style="color: #4f97d7;">(</span><span style="color: #a45bad;">CENTER</span><span style="color: #4f97d7;">)</span>;
-<span style="color: #4f97d7; font-weight: bold;">text</span><span style="color: #4f97d7;">(</span>seconds, <span style="color: #4f97d7;">width</span> / <span style="color: #a45bad;">2</span>, <span style="color: #a45bad;">20</span><span style="color: #4f97d7;">)</span>;
+<pre  class="src src-processing"><span style="color: #8cc4ff; font-weight: bold;">int</span> <span style="color: #fcaf3e;">level</span> = <span style="color: #e9b2e3;">1</span>;
+
+<span style="color: #8cc4ff; font-weight: bold;">void</span> <span style="color: #fce94f; font-weight: bold;">switchLevel</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  level = level + <span style="color: #e9b2e3;">1</span>;
+  <span style="color: #b4fa70; font-weight: bold;">for</span> <span style="color: #bc6ec5;">(</span><span style="color: #8cc4ff; font-weight: bold;">int</span> <span style="color: #fcaf3e;">i</span> = <span style="color: #e9b2e3;">0</span>; i &lt; <span style="color: #8cc4ff; font-weight: bold;">level</span>; i++<span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
+    balls.add<span style="color: #2d9574;">(</span><span style="color: #b4fa70; font-weight: bold;">new</span> <span style="color: #8cc4ff; font-weight: bold;">Ball</span><span style="color: #67b11d;">(</span><span style="color: #b4fa70; font-weight: bold;">random</span><span style="color: #b1951d;">(</span><span style="color: #e090d7;">width</span><span style="color: #b1951d;">)</span>, <span style="color: #b4fa70; font-weight: bold;">random</span><span style="color: #b1951d;">(</span><span style="color: #e090d7;">height</span><span style="color: #b1951d;">)</span>, <span style="color: #b4fa70; font-weight: bold;">random</span><span style="color: #b1951d;">(</span>-<span style="color: #e9b2e3;">5</span>, <span style="color: #e9b2e3;">5</span><span style="color: #b1951d;">)</span>, <span style="color: #b4fa70; font-weight: bold;">random</span><span style="color: #b1951d;">(</span>-<span style="color: #e9b2e3;">5</span>, <span style="color: #e9b2e3;">5</span><span style="color: #b1951d;">)</span><span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span>;
+  <span style="color: #bc6ec5;">}</span>
+  setTimeOut<span style="color: #bc6ec5;">()</span>;
+<span style="color: #4f97d7;">}</span>
+
+<span style="color: #8cc4ff; font-weight: bold;">void</span> <span style="color: #fce94f; font-weight: bold;">draw</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  ...
+  <span style="color: #b4fa70; font-weight: bold;">if</span> <span style="color: #bc6ec5;">(</span>balls.<span style="color: #b4fa70; font-weight: bold;">size</span><span style="color: #2d9574;">()</span> == <span style="color: #e9b2e3;">0</span><span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
+    switchLevel<span style="color: #2d9574;">()</span>;
+  <span style="color: #bc6ec5;">}</span>
+<span style="color: #4f97d7;">}</span>
 </pre>
 </div>
 
 </section>
-<section id="slide-orgee1d02f">
-<h3 id="orgee1d02f">Tiden løper ut</h3>
+<section id="slide-org9a13072">
+<h3 id="org9a13072">Utfordringer</h3>
+<ul>
+<li>Gjør det mulig å starte fra begynnelsen etter å ha tapt</li>
+<li>Legg til en pause mellom brett</li>
+<li>Få ballene til å ikke kunne bevege seg raskere på skrå enn loddrett og vannrett</li>
+<li>Tilpass vanskelighetsgraden mer</li>
 
+</ul>
 
 </section>
 </section>
 <section>
-<section id="slide-orgfff09cd">
-<h2 id="orgfff09cd">Spill - Bouncy Ball</h2>
+<section id="slide-org44612fa">
+<h2 id="org44612fa">Spill - Bouncy Ball</h2>
 <ul>
 <li>Styr en sprettball med tastaturet</li>
 <li>Sprett på og ødelegg baller som triller langs bakken</li>
@@ -1059,8 +1153,8 @@ balls.remove<span style="color: #4f97d7;">(</span><span style="color: #a45bad;">
 </section>
 </section>
 <section>
-<section id="slide-orgb8b4e20">
-<h2 id="orgb8b4e20">Nyttige lenker</h2>
+<section id="slide-org9612eae">
+<h2 id="org9612eae">Nyttige lenker</h2>
 <ul>
 <li><a href="https://oppgaver.kidsakoder.no">https://oppgaver.kidsakoder.no</a> - Oppgave brukt av Lær Kidsa Koding, tar også for seg andre språk</li>
 <li><a href="http://vestera.as/processing">http://vestera.as/processing</a> - Prøv Processing i nettleseren med mange små oppgaver</li>

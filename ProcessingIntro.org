@@ -1,6 +1,7 @@
-#+OPTIONS: toc:nil H:4 num:nil ^:nil reveal_title_slide:"<h1>%t</h1><h2>%a</h2>"
+#+OPTIONS: toc:nil H:4 num:nil ^:nil reveal_title_slide:"<h1>%t</h1><h2>%a</h2><h3>%e</h3>"
 #+TITLE: Introduksjon til Processing
-#+AUTHOR: Rustam Mehmandarov og Sigmund Hansen
+#+AUTHOR: Rustam Mehmandarov, Sigmund Hansen
+#+EMAIL: rm@computas.com, sigmund@sigmund-hansen.com
 #+REVEAL_THEME: night
 #+REVEAL_EXTRA_CSS: bigsource.css
 
@@ -481,7 +482,9 @@ void draw() {
 
 *** Oppgaver
 
-- Legg til hastighet i ballen og spretting i kantene
+- Legg til hastighetsvariabler i ballene
+- Få ballen til å bevege seg
+- Få ballen til å sprette i kantene
 
 * Lister
 
@@ -586,29 +589,102 @@ balls.remove(0);
 - Ødelegg alle ballene før tiden går ut
 - Flere baller eller kortere tid for hvert brett
 
+** Nedtelling
+
+*** Variabel for nedtellingen
+
+- Variabel for når tiden går ut
+- Vi lager en hjelpemetode for å sette utløpstiden
+- Vi bruker millisekunder (tusendels sekunder)
+
+#+BEGIN_SRC processing
+int timeOut;
+
+void setTimeOut() {
+  timeOut = millis() + 30000;
+}
+#+END_SRC
+
+*** Vise nedtellingen
+
+#+BEGIN_SRC processing
+void draw() {
+  background(0);
+  textAlign(CENTER);
+  int timeLeft = timeOut - millis();
+  int seconds = timeLeft / 1000;
+  text(seconds, width / 2, 20);
+  ...
+}
+#+END_SRC
+
+*** Tiden løper ut
+
+- Når ~millis()~ blir lik timeOut, er spillet slutt
+
+#+BEGIN_SRC processing
+void draw() {
+  background(0);
+  textAlign(CENTER);
+  int timeLeft = timeOut - millis();
+
+  if (timeLeft <= 0) {
+    text("GAME OVER", width / 2, height / 2);
+    return;
+  }
+  ...
+}
+#+END_SRC
+
 ** Ødelegge ballene
 
-- Lag en ~mouseClicked~
+- Lag en ~mouseClicked~ metode
 - Løp gjennom ballene
 - Se om avstand fra muspeker til ballen er mindre enn radien
 - I så fall, fjern ballen fra listen
 
-** Nedtelling
-
-- Variabel for når tiden går ut: ~int timeOut = millis() + 30000;~
-  - Husk å bare sette denne når et brett begynner
-- Sjekke om tiden har gått ut ~if (millis() >= timeOut) ...~
-- Vise nedtellingen:
-
 #+BEGIN_SRC processing
-int timeLeft = timeOut - millis();
-int seconds = timeLeft / 1000;
-textAlign(CENTER);
-text(seconds, width / 2, 20);
+void mouseClicked() {
+  for (Ball ball : balls) {
+    if (dist(ball.x, ball.y, mouseX, mouseY) < 25) {
+      balls.remove(ball);
+      return;
+    }
+  }
+}
 #+END_SRC
 
-** Tiden løper ut
+*** Neste brett
 
+- Variabel for hvilket brett vi er på
+- Bytte brett når alle ballene er ødelagt
+- Se [[https://processing.org/reference/random_.html][random()]] for forklaring på de tilfeldige tallene
+
+#+BEGIN_SRC processing
+int level = 1;
+
+void switchLevel() {
+  level = level + 1;
+  for (int i = 0; i < level; i++) {
+    balls.add(new Ball(random(width), random(height), random(-5, 5), random(-5, 5)));
+  }
+  setTimeOut();
+}
+
+void draw() {
+  ...
+  if (balls.size() == 0) {
+    switchLevel();
+  }
+}
+#+END_SRC
+
+** Utfordringer
+
+- Gjør det mulig å starte fra begynnelsen etter å ha tapt
+- Legg til en pause mellom brett
+- Få ballene til å ikke kunne bevege seg raskere på skrå enn loddrett og vannrett
+- Tilpass vanskelighetsgraden mer
 
 * Spill - Bouncy Ball
 

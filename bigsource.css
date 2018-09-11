@@ -1,3 +1,5 @@
 .reveal pre, .reveal code, .reveal src { font-size: 0.7em; }
 
 * { hyphens: manual !important; -moz-hyphens: manual !important; -webkit-hyphens: manual !important; -ie-hyphens: manual !important; }
+
+h3 { word-break: keep-all; }
